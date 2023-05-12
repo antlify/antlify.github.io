@@ -40,7 +40,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
           }}
         />
         {theme_switcher && (
-          <Image
+          <img
             src={srcDarkmode ? srcDarkmode : logo_darkmode}
             class={"hidden dark:inline-block"}
             width={logo_width.replace("px", "") * 2}
