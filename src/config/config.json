@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Astroplate",
-    "base_url": "https://astroplate.netlify.app",
+    "title": "Antlify Consulting Kft.",
+    "base_url": "https://antlify.github.io",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/a.svg",
     "logo": "/images/logo.svg",
     "logo_darkmode": "/images/logo-darkmode.svg",
-    "logo_width": "150",
+    "logo_width": "180",
     "logo_height": "30",
     "logo_text": "Astroplate"
   },
