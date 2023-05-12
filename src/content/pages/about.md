@@ -13,8 +13,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt
 
 ##### Attribúciók
 
-Statikus weboldal: [Zeon Studio](https://zeon.studio)
+Jamstack: [Zeon Studio](https://zeon.studio)í
 
-Grafikák: [unDraw](https://undraw.co/)
+Graphics: [unDraw](https://undraw.co/)
 
-Tárhely: [GitHub Pages](https://pages.github.com/)
+Hosting: [GitHub Pages](https://pages.github.com/)

@@ -44,7 +44,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-list {
-  @apply z-10 min-w-[180px] rounded bg-body p-4 shadow dark:bg-darkmode-body;
+  @apply z-10 min-w-[220px] rounded bg-body p-4 shadow dark:bg-darkmode-body;
 }
 
 .nav-dropdown-item {
@@ -52,7 +52,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-link {
-  @apply block py-1 font-semibold text-dark transition hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
+  @apply block py-1 font-normal text-dark transition hover:text-primary dark:text-darkmode-text dark:hover:text-darkmode-primary;
 }
 
 //theme-switcher

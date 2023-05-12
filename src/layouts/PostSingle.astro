@@ -2,7 +2,6 @@
 import BlogCard from "@/components/BlogCard.astro";
 import Share from "@/components/Share.astro";
 import config from "@/config/config.json";
-import Disqus from "@/function-components/Disqus";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
 import similerItems from "@/lib/utils/similarItems";
@@ -93,9 +92,6 @@ const { title, description, author, categories, image, date, tags } = post.data;
               slug={post.slug}
             />
           </div>
-        </div>
-        <div class="mt-20">
-          <Disqus client:load />
         </div>
       </article>
     </div>
