@@ -36,8 +36,8 @@ features:
     - "Átlátható fejlesztési tervekkel és pontosan elszámolt feladatokkal"
     button:
       enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/astroplate"
+      label: "Részletek"
+      link: "/regular"
 
   - title: "Nemzetközi megbízások"
     image: "/images/service-3.png"
