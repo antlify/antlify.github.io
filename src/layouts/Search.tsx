@@ -105,16 +105,16 @@ const Search = ({ searchList }: Props) => {
             <div className="mx-auto pt-5 text-center">
               <img
                 className="mx-auto mb-6"
-                src="/images/no-search-found.png"
+                src="/images/undraw_web_search_re_efla.svg"
                 alt="no-search-found"
               />
               <h1 className="h2 mb-4">
-                {inputVal.length < 1 ? "Search Post Here" : "No Search Found!"}
+                {inputVal.length < 1 ? "Keresés a portfóliónkban" : "Nincs találat!"}
               </h1>
               <p>
                 {inputVal.length < 1
-                  ? "Search for posts by title, category, or tag."
-                  : "We couldn't find what you searched for. Try searching again."}
+                  ? "Keressen bejegyzéseket cím, kategória vagy címke alapján."
+                  : "Nem találtuk, amit keresett. Próbáljon újra keresni."}
               </p>
             </div>
           ) : (

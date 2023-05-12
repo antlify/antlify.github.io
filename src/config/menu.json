@@ -1,11 +1,11 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Főoldal",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Rólunk",
       "url": "/about"
     },
     {
@@ -46,7 +46,7 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "Rólunk",
       "url": "/about"
     },
     {

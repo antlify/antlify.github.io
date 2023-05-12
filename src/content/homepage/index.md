@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Villámgyors, modern weboldalakat készítünk."
-  content: "Legyen Ön is elégedett weboldal tulajdonos.
+  content: "Pixel perfekt webfejlesztés.
 _— Keressen elérhetőségeinken és dolgozzunk együtt!_"
   image: "/images/banner.png"
   button:

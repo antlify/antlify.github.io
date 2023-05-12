@@ -1,9 +1,20 @@
 ---
-title: "Hey, I am John Doe!"
-meta_title: "About"
-description: "this is meta description"
-image: "/images/avatar.png"
+title: "Hello, ez az Antlify!"
+meta_title: "Rólunk"
+description: ""
+image: "/images/a.svg"
 draft: false
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+
+
+
+
+##### Attribúciók
+
+Statikus weboldal: [Zeon Studio](https://zeon.studio)
+
+Grafikák: [unDraw](https://undraw.co/)
+
+Tárhely: [GitHub Pages](https://pages.github.com/)
