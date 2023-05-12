@@ -1,46 +1,47 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Villámgyors, modern weboldalakat készítünk."
+  content: "Legyen Ön is elégedett weboldal tulajdonos.
+_— Keressen elérhetőségeinken és dolgozzunk együtt!_"
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/astroplate"
+    label: "Portfólió"
+    link: "/works"
 
 # Features
 features:
-  - title: "What's Included in Astroplate"
+  - title: "Weboldal és webáruház fejlesztés"
     image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
+    content: "Több éves tapasztalattal profi és időtálló eredményt biztosítunk. Modern módszerek és alapos piaci ismeretek alapján sokszorozzuk meg az értékesítést és ügyfélbázist."
     bulletpoints:
-    - "10+ Pre-build pages"
-    - "95+ Google Pagespeed Score"
-    - "Build with Astro and TailwindCSS for easy and customizable styling"
-    - "Fully responsive on all devices"
-    - "SEO-optimized for better search engine rankings"
-    - "**Open-source and free** for personal and commercial use"
+    - "Statikus weboldal fejlesztés alacsony fenntartási költséggel"
+    - "**[WordPress](/categories/wordpress)** és **[WooCommerce](/categories/woocommerce)** weboldalak"
+    - "Határidős megbízással pontos és gyors átadás"
+    - "Biztonságos és karbantartott populáris rendszerek"
+    - "Piaci sztenderdeknek megfelelően optimalizált"
+    - "Tartalom feltöltés és manuális tesztelés."
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "Discover the Key Features Of Astro"
+  - title: "Rendszeres projekt megbízások"
     image: "/images/service-2.png"
-    content: "Astro is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
+    content: "A projekt alapú megbízások mellett akár hosszú távú együttműködés keretében vállaljuk nagy volumenű weboldalak fejlesztését és üzemeltetését."
     bulletpoints:
-    - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-    - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-    - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+    - "Havi fix összegű megállapodással illetve órabéres elszámolással"
+    - "Rendelkezésre állás ügyfélfogadási időn túl sürgős esetekben"
+    - "Átlátható fejlesztési tervekkel és pontosan elszámolt feladatokkal"
     button:
       enable: true
       label: "Get Started Now"
       link: "https://github.com/zeon-studio/astroplate"
 
-  - title: "The Top Reasons to Choose Astro for Your Next Project"
+  - title: "Nemzetközi megbízások"
     image: "/images/service-3.png"
-    content: "With Astro, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    content: "Több éves szakmai tapasztalattal és nagyszerű csapattal, a nemzetközi piacon is kipróbált tudással vállaljuk itthoni és külföldi megbízásainkat."
     bulletpoints:
     - "Instantly load static sites for better user experience and SEO."
     - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."

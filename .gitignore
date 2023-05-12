@@ -2,6 +2,7 @@
 dist/
 .output/
 .json/
+.idea
 
 # dependencies
 node_modules/
