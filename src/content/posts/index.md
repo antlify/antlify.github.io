@@ -1,5 +1,7 @@
 ---
-title: "Blog Posts"
+title: "Portfólió"
 meta_title: ""
-description: "this is meta description"
+description: "Legutóbbi munkáink…"
 ---
+
+Lorem ipsum

@@ -18,7 +18,7 @@ const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
 const similarPosts = similerItems(post, posts, post.slug);
 const { Content } = await post.render();
-const { title, description, author, categories, image, date, tags } = post.data;
+const { title, description, author, categories, image, date, tags, domain } = post.data;
 ---
 
 <section class="section pt-7">
@@ -64,10 +64,11 @@ const { title, description, author, categories, image, date, tags } = post.data;
         </ul>
         <div class="content mb-10">
           <Content />
+          <a href={`https://${domain}`} target="_blank" class="btn btn-outline-primary lowercase">{domain}</a>
         </div>
         <div class="row items-start justify-between">
-          <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
-            <h5 class="mr-3">Tags :</h5>
+          <div class="mb-10 flex items-center lg:col-7 lg:mb-0">
+            <h5 class="mr-3">Stack:</h5>
             <ul>
               {
                 tags.map((tag: string) => (

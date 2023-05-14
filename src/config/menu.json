@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name": "Portfólió",
+      "url": "/posts"
+    },
+    {
       "name": "Szolgáltatásaink",
       "url": "",
       "hasChildren": true,
@@ -43,12 +47,12 @@
       "url": "/about"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Kapcsolat",
+      "url": "/contact"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "Portfólió",
+      "url": "/posts"
     }
   ]
 }

@@ -8,9 +8,10 @@ const postsCollection = defineCollection({
     description: z.string().optional(),
     date: z.date().optional(),
     image: z.string().optional(),
-    author: z.string().default("Admin"),
+    author: z.string().default("Antlify"),
     categories: z.array(z.string()).default(["others"]),
     tags: z.array(z.string()).default(["others"]),
+    domain: z.string().optional(),
     draft: z.boolean().optional(),
   }),
 });

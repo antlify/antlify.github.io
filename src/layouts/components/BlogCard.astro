@@ -6,7 +6,7 @@ import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
 
 const { summary_length, blog_folder } = config.settings;
 const { data } = Astro.props;
-const { title, image, date, author, categories } = data.data;
+const { title, image, date, author, categories, domain } = data.data;
 ---
 
 <div class="bg-body dark:bg-darkmode-body">
@@ -16,8 +16,8 @@ const { title, image, date, author, categories } = data.data;
         class="mb-6 w-full rounded"
         src={image}
         alt={title}
-        width={445}
-        height={230}
+        width={590}
+        height={200}
       />
     )
   }
@@ -42,9 +42,10 @@ const { title, image, date, author, categories } = data.data;
 
   <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
   <a
-    class="btn btn-outline-primary btn-sm"
-    href={`/${blog_folder}/${data.slug}`}
+    class="btn btn-outline-primary btn-sm lowercase"
+    href={`https://${domain}`}
+    target="_blank"
   >
-    read more
+    {domain}
   </a>
 </div>

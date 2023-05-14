@@ -75,7 +75,7 @@ const Search = ({ searchList }: Props) => {
             <div className="flex flex-nowrap">
               <input
                 className="form-input rounded-r-none"
-                placeholder="Search posts"
+                placeholder="Bejegyzések keresése"
                 type="search"
                 name="search"
                 value={inputVal}
