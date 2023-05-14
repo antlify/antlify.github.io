@@ -23,3 +23,8 @@
   background-image: url("images/aether.svg");
   background-size: cover;
 }
+
+.bg-drupal {
+  background-image: url("images/drupal.svg"), linear-gradient(to bottom, var(--tw-gradient-stops));
+  background-size: cover;
+}
