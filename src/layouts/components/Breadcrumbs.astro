@@ -1,7 +1,7 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
 
-const { className } = Astro.props;
+const { className, meta_title, title } = Astro.props;
 
 const paths = Astro.url.pathname.split("/").filter((x) => x);
 let parts = [
@@ -12,11 +12,12 @@ let parts = [
   },
 ];
 
-paths.forEach((label: string, i: number) => {
-  const href = `/${paths.slice(0, i + 1).join("/")}`;
-  label !== "page" &&
+
+paths.forEach((path, index) => {
+  const href = `/${paths.slice(0, index + 1).join("/")}`;
+  path !== "page" &&
     parts.push({
-      label: humanize(label.replace(/[-_]/g, " ")) || "",
+      label: meta_title || title,
       href,
       "aria-label": Astro.url.pathname === href ? "page" : undefined,
     });
@@ -25,19 +26,17 @@ paths.forEach((label: string, i: number) => {
 
 <nav aria-label="Breadcrumb" class={className}>
   <ol class="inline-flex" role="list">
-    {
-      parts.map(({ label, ...attrs }, index) => (
-        <li class="mx-1" role="listitem">
-          {index > 0 && <span class="inlin-block mr-1">/</span>}
-          {index !== parts.length - 1 ? (
-            <a class="text-primary dark:text-darkmode-primary" {...attrs}>
-              {label}
-            </a>
-          ) : (
-            <span class="text-light dark:text-darkmode-light">{label}</span>
-          )}
-        </li>
-      ))
-    }
+    {parts.map(({ label, ...attrs }, index) => (
+      <li class="mx-1" role="listitem">
+        {index > 0 && <span class="inlin-block mr-1">/</span>}
+        {index !== parts.length - 1 ? (
+          <a class="text-primary dark:text-darkmode-primary" {...attrs}>
+            {label}
+          </a>
+        ) : (
+          <span class="text-light dark:text-darkmode-light">{label}</span>
+        )}
+      </li>
+    ))}
   </ol>
 </nav>
