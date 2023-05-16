@@ -27,7 +27,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
   image={postIndex.data.image}
   description={postIndex.data.description}
 >
-  <PageHeader title={postIndex.data.title} />
+  <PageHeader title={postIndex.data.title} meta_title={postIndex.data.meta_title}/>
   <section class="section">
     <div class="container">
       <div class="row gx-5">
