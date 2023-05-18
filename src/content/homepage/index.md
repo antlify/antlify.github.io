@@ -20,7 +20,8 @@ features:
     - "**[WordPress](/categories/wordpress)** és **[WooCommerce](/categories/woocommerce)** weboldalak"
     - "Határidős megbízással pontos és gyors átadás"
     - "Biztonságos és karbantartott populáris rendszerek"
-    - "Piaci sztenderdeknek megfelelően optimalizált"
+    - "Piaci sztenderdeknek megfelelően optimalizálva"
+    - "Látványtervek és használhatósági tesztek"
     - "Tartalom feltöltés és manuális tesztelés."
     button:
       enable: false
