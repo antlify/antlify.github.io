@@ -7,40 +7,40 @@ _— Contact us and let's work together!_"
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Portfólió"
-    link: "/works"
+    label: "Works"
+    link: "/en/works"
 
 # Features
 features:
-  - title: "Weboldal és webáruház fejlesztés"
+  - title: "Website and ecommerce development"
     image: "/images/service-1.png"
-    content: "Több éves tapasztalattal profi és időtálló eredményt biztosítunk. Modern módszerek és alapos piaci ismeretek alapján sokszorozzuk meg az értékesítést és ügyfélbázist."
+    content: "With years of experience, we provide professional and timeless results. We multiply sales and customer base based on modern methods and thorough market knowledge."
     bulletpoints:
-    - "Statikus weboldal fejlesztés alacsony fenntartási költséggel"
-    - "**[WordPress](/categories/wordpress)** és **[WooCommerce](/categories/woocommerce)** weboldalak"
-    - "Határidős megbízással pontos és gyors átadás"
-    - "Biztonságos és karbantartott populáris rendszerek"
-    - "Piaci sztenderdeknek megfelelően optimalizálva"
-    - "Látványtervek és használhatósági tesztek"
-    - "Tartalom feltöltés és manuális tesztelés."
+    - "Static website development with low maintenance costs"
+    - "**[WordPress](/categories/wordpress)** and **[WooCommerce](/categories/woocommerce)** websites"
+    - "Accurate and fast delivery with fixed-term order"
+    - "Secure and maintained popular systems"
+    - "Optimized according to market standards"
+    - "Visual plans and usability tests"
+    - "Content upload and manual testing."
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "Rendszeres projekt megbízások"
+  - title: "Regular project assignments"
     image: "/images/service-2.png"
-    content: "A projekt alapú megbízások mellett akár hosszú távú együttműködés keretében vállaljuk nagy volumenű weboldalak fejlesztését és üzemeltetését."
+    content: "In addition to project-based assignments, we also undertake the development and operation of large-volume websites in the framework of long-term cooperation."
     bulletpoints:
-    - "Havi fix összegű megállapodással illetve órabéres elszámolással"
-    - "Rendelkezésre állás ügyfélfogadási időn túl sürgős esetekben"
-    - "Átlátható fejlesztési tervekkel és pontosan elszámolt feladatokkal"
+    - "With a monthly fixed amount agreement or with an hourly wage settlement"
+    - "Availability beyond customer reception hours in urgent cases"
+    - "With transparent development plans and precisely accounted tasks"
     button:
       enable: true
-      label: "Részletek"
-      link: "/regular"
+      label: "Details"
+      link: "/en/regular"
 
-  - title: "Nemzetközi megbízások"
+  - title: "International assignments"
     image: "/images/service-3.png"
     content: "Több éves szakmai tapasztalattal és nagyszerű csapattal, a nemzetközi piacon is kipróbált tudással vállaljuk itthoni és külföldi megbízásainkat."
     bulletpoints:

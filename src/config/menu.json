@@ -46,15 +46,15 @@
   ],
   "footer": [
     {
-      "name": "Rólunk",
+      "name": "nav.about",
       "url": "/about"
     },
     {
-      "name": "Kapcsolat",
+      "name": "nav.contact",
       "url": "/contact"
     },
     {
-      "name": "Portfólió",
+      "name": "nav.posts",
       "url": "/posts"
     }
   ]

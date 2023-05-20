@@ -3,8 +3,19 @@ import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
 
-const entry = await getEntryBySlug("pages", "en/about");
+export async function getStaticPaths() {
+  const paramsArray = Object.keys(languages).map(lang => {
+    return { params: { lang } };
+  });
+  return paramsArray;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const entry = await getEntryBySlug("pages", lang + "/about");
 const { Content } = await entry.render();
 const { title, description, meta_title, image } = entry.data;
 ---

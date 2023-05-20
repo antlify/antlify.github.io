@@ -17,6 +17,8 @@ export const ui = {
     'nav.international': 'International Projects',
     'nav.regular': 'Regular orders',
     'nav.drupal': 'Drupal',
+    'nav.contact': 'Contact',
+    'nav.contact_link': '/en/contact',
   },
   hu: {
     'nav.home': 'Főoldal',
@@ -29,5 +31,7 @@ export const ui = {
     'nav.international': 'Nemzetközi projektek',
     'nav.regular': 'Rendszeres megbízások',
     'nav.drupal': 'Drupal',
+    'nav.contact': 'Kapcsolat',
+    'nav.contact_link': '/hu/kapcsolat',
   },
 } as const;

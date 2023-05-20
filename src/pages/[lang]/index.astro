@@ -6,10 +6,22 @@ import Testimonial from "@/partials/Testimonial.astro";
 import { Image } from "@astrojs/image/components";
 import { getEntryBySlug } from "astro:content";
 import { FaCheck } from "react-icons/fa/index.js";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
 
-const homepage = await getEntryBySlug("homepage", "hu/front");
-const testimonial = await getEntryBySlug("sections", "hu/testimonial");
-const call_to_action = await getEntryBySlug("sections", "hu/call-to-action");
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const paramsArray = Object.keys(languages).map(lang => {
+    return { params: { lang } };
+  });
+  return paramsArray;
+}
+
+const homepage = await getEntryBySlug("homepage", lang + "/front");
+const testimonial = await getEntryBySlug("sections", lang + "/testimonial");
+const call_to_action = await getEntryBySlug("sections", lang + "/call-to-action");
 
 const { banner, features } = homepage.data;
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Kapcsolat"
-meta_title: "Lépjen kapcsolatba"
-description: "Keressen elérhetőségeinken és dolgozzunk együtt!"
+title: "Contact"
+meta_title: "Get in touch"
+description: "Contact us and let's work together!"
 draft: false
 ---

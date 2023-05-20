@@ -6,8 +6,8 @@ import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5/index.js";
 import LanguagePicker from '@/components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-const lang = getLangFromUrl(Astro.url);
 
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 export interface ChildNavigationLink {
@@ -150,9 +150,9 @@ const { pathname } = Astro.url;
         navigation_button.enable && (
           <a
             class="ml-5 btn btn-outline-primary btn-sm hidden lg:inline-block"
-            href={navigation_button.link}
+            href={`/${lang}${navigation_button.link}`}
           >
-            {navigation_button.label}
+            {t(navigation_button.label)}
           </a>
         )
       }

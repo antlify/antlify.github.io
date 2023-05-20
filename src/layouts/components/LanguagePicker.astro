@@ -2,7 +2,10 @@
 import { languages } from '../../i18n/ui';
 import { getLangFromUrl } from '../../i18n/utils';
 
+
 const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname.replace(new RegExp(`\/${lang}`), '');
+
 ---
 
 <div class="relative mx-3">
@@ -20,7 +23,7 @@ const lang = getLangFromUrl(Astro.url);
     <div id="langboxmenu" class="absolute mt-1 right-1 top-full min-w-max opacity-0 transition delay-75 ease-in-out z-10 absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
       <ul class="block text-right text-gray-900">
         {Object.entries(languages).map(([lang, label]) => (
-          <li><a href={`/${lang}/`} class="block text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">{label}</a></li>
+          <li><a href={`/${lang}${currentPath}`} class="block text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">{label}</a></li>
         ))}
       </ul>
     </div>

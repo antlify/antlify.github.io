@@ -7,7 +7,19 @@ import PageHeader from "@/partials/PageHeader.astro";
 
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { humanize } from "@/lib/utils/textConverter";
-const entry = await getEntryBySlug("pages", "drupal");
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const paramsArray = Object.keys(languages).map(lang => {
+    return { params: { lang } };
+  });
+  return paramsArray;
+}
+const entry = await getEntryBySlug("pages", lang + "/drupal");
 const { Content } = await entry.render();
 const { title, description, meta_title, image } = entry.data;
 ---

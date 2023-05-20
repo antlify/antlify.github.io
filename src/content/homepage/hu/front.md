@@ -8,7 +8,7 @@ _— Keressen elérhetőségeinken és dolgozzunk együtt!_"
   button:
     enable: true
     label: "Portfólió"
-    link: "/works"
+    link: "/hu/works"
 
 # Features
 features:
