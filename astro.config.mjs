@@ -13,7 +13,7 @@ import config from "./src/config/config.json";
 export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "https://antlify.github.io",
   base: "",
-  trailingSlash: config.site.trailing_slash ? "always" : "never",
+  trailingSlash: 'ignore',
   integrations: [
     react(),
     sitemap(),

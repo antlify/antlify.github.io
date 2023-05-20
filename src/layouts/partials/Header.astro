@@ -4,6 +4,10 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5/index.js";
+import LanguagePicker from '@/components/LanguagePicker.astro';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
 
 export interface ChildNavigationLink {
   name: string;
@@ -123,11 +127,13 @@ const { pathname } = Astro.url;
         )
       }
     </ul>
+
     <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
       {
         settings.search && (
           <a
-            class="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
+            class="mr-3 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
             href="/search"
             aria-label="search"
           >
@@ -135,17 +141,21 @@ const { pathname } = Astro.url;
           </a>
         )
       }
-      <ThemeSwitcher className="mr-5" />
+
+      <LanguagePicker />
+      <ThemeSwitcher />
+
       {
         navigation_button.enable && (
           <a
-            class="btn btn-outline-primary btn-sm hidden lg:inline-block"
+            class="ml-5 btn btn-outline-primary btn-sm hidden lg:inline-block"
             href={navigation_button.link}
           >
             {navigation_button.label}
           </a>
         )
       }
+
     </div>
   </nav>
 </header>

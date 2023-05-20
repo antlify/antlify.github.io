@@ -3,7 +3,9 @@ import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import { getLangFromUrl } from '../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
 const entry = await getEntryBySlug("pages", "about");
 const { Content } = await entry.render();
 const { title, description, meta_title, image } = entry.data;
