@@ -1,46 +1,46 @@
 {
   "main": [
     {
-      "name": "Főoldal",
+      "name": "nav.home",
       "url": "/"
     },
     {
-      "name": "Rólunk",
+      "name": "nav.about",
       "url": "/about"
     },
     {
-      "name": "Portfólió",
+      "name": "nav.posts",
       "url": "/posts"
     },
     {
-      "name": "Szolgáltatásaink",
+      "name": "nav.services",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Weboldal fejlesztés",
+          "name": "nav.website",
           "url": "/website"
         },
         {
-          "name": "Webáruház üzemeltetés",
+          "name": "nav.webshop",
           "url": "/webshop"
         },
         {
-          "name": "Belső rendszerek",
+          "name": "nav.internal",
           "url": "/internal"
         },
         {
-          "name": "Nemzetközi projektek",
+          "name": "nav.international",
           "url": "/international"
         },
         {
-          "name": "Rendszeres megbízások",
+          "name": "nav.regular",
           "url": "/regular"
         }
       ]
     },
     {
-      "name": "Drupal",
+      "name": "nav.drupal",
       "url": "/drupal"
     }
   ],
