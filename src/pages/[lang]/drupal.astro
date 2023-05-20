@@ -37,7 +37,7 @@ const { title, description, meta_title, image } = entry.data;
         class="bg-drupal rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-theme-light"
       >
         <h1 set:text={humanize(title)} />
-        <Breadcrumbs className="mt-6" />
+        <Breadcrumbs className="mt-6" meta_title={meta_title} title={title}/>
       </div>
     </div>
   </section>
