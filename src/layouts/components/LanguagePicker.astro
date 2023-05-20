@@ -10,14 +10,14 @@ const lang = getLangFromUrl(Astro.url);
     <label for="langbox" class="flex items-center space-x-1 cursor-pointer">
     <span class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
 
-      <img src={`/flags/${lang}.svg`} class="w-4 px-0"></span>
+      <img src={`/flags/${lang}.svg`} class="w-5 px-0"></span>
 
       <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
       </svg>
     </span>
     </label>
-    <div id="langboxmenu" class="absolute mt-1 right-1 top-full min-w-max opacity-0 transition delay-75 ease-in-out z-10 absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+    <div id="langboxmenu" class="absolute mt-1 right-1 top-full min-w-max opacity-0 transition delay-75 ease-in-out z-10 absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
       <ul class="block text-right text-gray-900">
         {Object.entries(languages).map(([lang, label]) => (
           <li><a href={`/${lang}/`} class="block text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">{label}</a></li>

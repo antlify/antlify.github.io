@@ -2,12 +2,16 @@
 import Logo from "@/components/Logo.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
-import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5/index.js";
 import LanguagePicker from '@/components/LanguagePicker.astro';
-import { getLangFromUrl } from '../../i18n/utils';
-
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
+
+const dynamicPath = `@/config/menu-${lang}.json`;
+
+import menu from dynamicPath;
+
+const t = useTranslations(lang);
 
 export interface ChildNavigationLink {
   name: string;
