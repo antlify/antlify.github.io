@@ -19,6 +19,11 @@ export const ui = {
     'nav.drupal': 'Drupal',
     'nav.contact': 'Contact',
     'nav.contact_link': '/en/contact',
+    'posts.title': 'Portfolio',
+    'sidebar.categories': 'Categories',
+    'sidebar.callout': 'Do you have an job for us?',
+    'sidebar.prose': 'Contact us and work together!',
+    'sidebar.button': 'Contact',
   },
   hu: {
     'nav.home': 'Főoldal',
@@ -33,5 +38,10 @@ export const ui = {
     'nav.drupal': 'Drupal',
     'nav.contact': 'Kapcsolat',
     'nav.contact_link': '/hu/kapcsolat',
+    'posts.title': 'Portfólió',
+    'sidebar.categories': 'Kategóriák',
+    'sidebar.callout': 'Van egy megbízása számunkra?',
+    'sidebar.prose': 'Keressen elérhetőségeinken és dolgozzunk együtt!',
+    'sidebar.button': 'Kapcsolat',
   },
 } as const;

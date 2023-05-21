@@ -9,25 +9,37 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader.astro";
 import PostSidebar from "@/partials/PostSidebar.astro";
 import { getEntryBySlug } from "astro:content";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const paramsArray = Object.keys(languages).map(lang => {
+    return { params: { lang } };
+  });
+  return paramsArray;
+}
 
 const { blog_folder } = config.settings;
-const postIndex = await getEntryBySlug<any, string>(blog_folder, "index");
-const posts = await getSinglePage(blog_folder);
-const allCategories = await getAllTaxonomy(blog_folder, "categories");
-const categories = await getTaxonomy(blog_folder, "categories");
-const tags = await getTaxonomy(blog_folder, "tags");
+
+const posts = await getSinglePage(blog_folder + lang);
+const allCategories = await getAllTaxonomy(blog_folder + lang, "categories");
+const categories = await getTaxonomy(blog_folder + lang, "categories");
+const tags = await getTaxonomy(blog_folder + lang, "tags");
 const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
 <Base
-  title={postIndex.data.title}
-  meta_title={postIndex.data.meta_title}
-  image={postIndex.data.image}
-  description={postIndex.data.description}
+  title={t('posts.title')}
+  meta_title={t('posts.title')}
+  image=""
+  description=""
 >
-  <PageHeader title={postIndex.data.title} meta_title={postIndex.data.meta_title}/>
+  <PageHeader title={t('posts.title')} meta_title={t('posts.title')}/>
   <section class="section">
     <div class="container">
       <div class="row gx-5">

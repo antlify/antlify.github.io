@@ -9,14 +9,15 @@ export async function getStaticPaths() {
   const pages = await getCollection('pages')
 
   const paths = pages.map(page => {
-    const [lang, ...slug] = page.slug.split('/');
-    return { params: { lang, regular: slug.join('/') || undefined }, props: page }
+    const [langcode, ...slug] = page.slug.split('/');
+    return { params: { lang: langcode, regular: slug.join('/') || undefined }, props: page }
   })
 
   return paths;
 }
 
-const { lang, page } = Astro.params;
+const { lang, regular } = Astro.params;
+const { page } = Astro.props;
 
 const { title, meta_title, description, image } = page.data;
 const { Content } = await page.render();
