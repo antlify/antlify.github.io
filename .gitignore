@@ -3,6 +3,7 @@ dist/
 .output/
 .json/
 .idea
+.vscode
 
 # dependencies
 node_modules/
