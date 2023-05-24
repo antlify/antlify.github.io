@@ -1,0 +1,32 @@
+.back-g-800:hover{
+    background-color: rgb(249 250 251) !important;
+}
+
+.back-g-900{
+    background-color: rgb(255, 255, 255);
+}
+
+.text-g-900{
+    color: rgb(17 24 39);
+}
+
+.text-g-700{
+    color: rgb(55 65 81);
+}
+:is(.dark body) {
+    .back-g-800:hover{
+        background-color: rgb(31 41 55) !important;
+    }
+
+    .back-g-900{
+        background-color: rgb(17 24 39);
+    }
+
+    .text-g-900{
+        color: rgb(255, 255, 255);
+    }
+
+    .text-g-700{
+        color: rgb(249 250 251);
+    }
+}
