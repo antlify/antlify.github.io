@@ -1,6 +1,6 @@
 ---
-title: "Weboldal fejlesztés"
-meta_title: "Weboldal fejlesztés"
+title: "Weboldal fejlesztés EN"
+meta_title: "Weboldal fejlesztés EN"
 description: "Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?"
 draft: false
 ---
