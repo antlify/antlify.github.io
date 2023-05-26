@@ -1,11 +1,10 @@
 ---
-title: "Nemzetközi projektek"
-meta_title: "Nemzetközi projektek"
-description: "Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?"
+title: "International Projects"
+meta_title: "International Projects"
+description: "Are you looking for the ideal solution to make your business more efficient?"
 draft: false
 ---
 
-Az Antlify Consulting Kft. széleskörű tapasztalattal rendelkezik a nemzetközi projektmenedzsment területén, és stratégiai megközelítést követ a határokon átnyúló zökkenőmentes együttműködés biztosítása érdekében. Céljuk az ügyfelek elvárásainak felülmúlása, amelyhez globális gondolkodásmódot, hatékony kommunikációt, megbízható tervezést, erőforrás-elosztást, technológia felhasználást, kockázatkezelést, minőségbiztosítást, időben teljesíthető eredményeket, folyamatos fejlesztést és ügyfél-elégedettséget alkalmaznak. Az Antlify garantálja, hogy szakértelmükkel a nemzetközi szoftverfejlesztési és informatikai igényekben ügyfeleik elvárásait felülmúlják.
+Antlify Consulting Ltd. has extensive experience in international project management and adopts a strategic approach to ensure smooth cross-border collaboration. Their goal is to exceed customer expectations by applying a global mindset, effective communication, reliable planning, resource allocation, technology utilization, risk management, quality assurance, timely deliverables, continuous improvement, and customer satisfaction. Antlify guarantees to surpass client expectations in international software development and IT requirements.
 
-> Bízzon az Antlify Consulting Kft-ben minden nemzetközi szoftverfejlesztési és informatikai igényét illetően, és tapasztalja meg, hogy szakértelmünk milyen különbséget tud tenni.
-
+> Trust Antlify Consulting Ltd. for all your international software development and IT needs and experience the difference our expertise can make.

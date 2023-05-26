@@ -42,7 +42,7 @@ features:
 
   - title: "International assignments"
     image: "/images/service-3.png"
-    content: "Több éves szakmai tapasztalattal és nagyszerű csapattal, a nemzetközi piacon is kipróbált tudással vállaljuk itthoni és külföldi megbízásainkat."
+    content: "With several years of professional experience and an excellent team, we undertake both domestic and international projects, utilizing our proven knowledge and expertise."
     bulletpoints:
     - "Instantly load static sites for better user experience and SEO."
     - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."

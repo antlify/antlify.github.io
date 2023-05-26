@@ -1,15 +1,15 @@
 ---
-title: "Belső rendszerek"
-meta_title: "Belső rendszerek fejlesztése"
-description: "Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?"
+title: "Internal Systems"
+meta_title: "Developing Internal Systems"
+description: "Are you looking for the ideal solution to make your business more efficient?"
 draft: false
 ---
 
-_Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?_
+_Are you looking for the ideal solution to make your business more efficient?_
 
-Az egyedi belső rendszer fejlesztés ilyen esetben tökéletes megoldás lehet! Csapatunk a vállalkozása igényeihez és céljaihoz igazított, egyedi rendszert készít, amely megkönnyíti az üzleti folyamatokat, növeli a hatékonyságot, és javítja a dolgozók munkakörülményeit.
+In this case, custom internal system development can be the perfect solution! Our team creates a customized system tailored to your business needs and goals, which simplifies business processes, increases efficiency, and improves working conditions for employees.
 
-Vegye fel velünk a kapcsolatot még ma, hogy segíthessünk az Ön üzletének fejlesztésében!
+Contact us today to help you enhance your business!
 
 <div class="flex justify-center">
 
@@ -18,23 +18,23 @@ Vegye fel velünk a kapcsolatot még ma, hogy segíthessünk az Ön üzletének 
 <svg role="img" width="48" class="opacity-50 hover:opacity-75 ease-in-out duration-300 mx-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Laravel Nova</title><path d="M21.333 4.319C16.56.386 9.453.632 4.973 5.057a7.571 7.571 0 0 0 0 10.8c3.018 2.982 7.912 2.982 10.931 0a3.245 3.245 0 0 0 0-4.628 3.342 3.342 0 0 0-4.685 0 1.114 1.114 0 0 1-1.561 0 1.082 1.082 0 0 1 0-1.543 5.57 5.57 0 0 1 7.808 0 5.408 5.408 0 0 1 0 7.714c-3.881 3.834-10.174 3.834-14.055 0a9.734 9.734 0 0 1-.015-13.87C5.596 1.35 8.638 0 12 0c3.75 0 7.105 1.68 9.333 4.319zm-.714 16.136A12.184 12.184 0 0 1 12 24a12.18 12.18 0 0 1-9.333-4.319c4.772 3.933 11.88 3.687 16.36-.738a7.571 7.571 0 0 0 0-10.8c-3.018-2.982-7.912-2.982-10.931 0a3.245 3.245 0 0 0 0 4.628 3.342 3.342 0 0 0 4.685 0 1.114 1.114 0 0 1 1.561 0 1.082 1.082 0 0 1 0 1.543 5.57 5.57 0 0 1-7.808 0 5.408 5.408 0 0 1 0-7.714c3.881-3.834 10.174-3.834 14.055 0a9.734 9.734 0 0 1 .03 13.855z"/></svg>
 
 <svg role="img" width="48" class="opacity-50 hover:opacity-75 ease-in-out duration-300 mx-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Drupal</title><path d="M15.78 5.113C14.09 3.425 12.48 1.815 11.998 0c-.48 1.815-2.09 3.425-3.778 5.113-2.534 2.53-5.405 5.4-5.405 9.702a9.184 9.185 0 1018.368 0c0-4.303-2.871-7.171-5.405-9.702M6.72 16.954c-.563-.019-2.64-3.6 1.215-7.416l2.55 2.788a.218.218 0 01-.016.325c-.61.625-3.204 3.227-3.527 4.126-.066.186-.164.18-.222.177M12 21.677a3.158 3.158 0 01-3.158-3.159 3.291 3.291 0 01.787-2.087c.57-.696 2.37-2.655 2.37-2.655s1.774 1.988 2.367 2.649a3.09 3.09 0 01.792 2.093A3.158 3.158 0 0112 21.677m6.046-5.123c-.068.15-.223.398-.431.405-.371.014-.411-.177-.686-.583-.604-.892-5.864-6.39-6.848-7.455-.866-.935-.122-1.595.223-1.94C10.736 6.547 12 5.285 12 5.285s3.766 3.574 5.336 6.016c1.57 2.443 1.029 4.556.71 5.253"/></svg>
+
 </div>
 
 ![image](/illustration/ag1.png)
 
-#### Megoldásaink
+#### Our Solutions
 
-**Mobilra optimalizált webappok:**
-Internetkapcsolattal bármikor elérhető, asztali és mobil eszközökön egyaránt könnyen kezelhető alkalmazások.
+**Mobile-optimized web apps:** 
+Applications that are easily accessible on desktop and mobile devices, available anytime with an internet connection.
 
-**Automatizált ismétlődő folyamatok:**
-Csökkentse a hibalehetőségek számát, ezzel javítva a hatékonyságot és minimalizálva a költségeket.
+**Automated repetitive processes:** 
+Reduce the chances of errors, improve efficiency, and minimize costs by automating repetitive tasks.
 
-**Átlátható specializált felületek:**
-Felhasználói könnyen elérik azokat az információkat és szolgáltatásokat, amelyek a számukra legfontosabbak.
+**Clear and specialized interfaces:** 
+Users can easily access the information and services that are most important to them.
 
-**Időszakos kalibrációk:**
-A zökkenőmentes online élmény és hatékony működés biztosítása felhasználók számára.
-
+**Periodic calibrations:** 
+Ensure a seamless online experience and efficient operation for users.
 
 

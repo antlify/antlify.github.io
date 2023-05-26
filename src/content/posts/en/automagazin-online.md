@@ -4,11 +4,10 @@ meta_title: ""
 description: "this is meta description"
 date: 2022-01-13T05:00:00Z
 image: "/portfolio/automagazin.png"
-categories: ["Magazin", "Webáruház"]
+categories: ["Magazine", "Online Store"]
 tags: ["WordPress", "WooCommerce"]
 domain: "automagazinonline.hu"
 draft: false
 ---
 
-_„az autórajongók és autóvásárlók szaklapja”_ nyomtatott újságban. Az autóMAGAZIN weboldalának és belső rendszerének fejlesztésére kaptunk megbízást.
-
+Received a commission to develop the website and internal system of autóMAGAZIN, the _"magazine for car enthusiasts and buyers"_ in the printed journal.

@@ -1,14 +1,13 @@
 ---
 title: "INGRED"
 meta_title: ""
-description: "rendezvényszervezéssel foglalkozó vállalkozás szolgáltatásait segíti elő"
+description: "Facilitating the services of an event organizing business"
 date: 2022-06-10T05:00:00Z
 image: "/portfolio/ingred.png"
-categories: ["Rendezvény", "Belső rendszer", "Egyedi fejlesztés"]
+categories: ["Event", "Internal System", "Custom Development"]
 tags: ["Laravel"]
 domain: "ingred.hu"
 draft: false
 ---
 
-Belső rendszer fejlesztés, amely az rendezvényszervezéssel foglalkozó vállalkozás szolgáltatásait segíti elő. A weboldal könnyen használható, és navigációja logikus felépítésű, és a dizájn letisztult.
-
+Internal system development that facilitates the services of an event organizing business. The website is user-friendly with a logical navigation structure and a clean design.

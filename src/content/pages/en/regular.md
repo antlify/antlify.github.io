@@ -1,13 +1,13 @@
 ---
-title: "Rendszeres megbízások"
-meta_title: "Belső rendszerek fejlesztése"
-description: "Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?"
+title: "Ongoing Engagements"
+meta_title: "Development of Internal Systems"
+description: "Are you looking for the ideal solution to make your business more efficient?"
 draft: false
 ---
-Az Antlify Consulting Kft-nél büszkék vagyunk arra, hogy kiemelkedő szoftverfejlesztési és informatikai megoldásokat nyújtunk ügyfeleink számára. Az állandó megbízások kezeléséhez alkalmazott folyamatos kommunikáció és a szisztematikus folyamatunk biztosítja, hogy ügyfeleink elégedettek legyenek a kimenettel.
 
-Ha keres egy megbízható és hatékony partner, aki kiváló minőségű informatikai szolgáltatásokat nyújt, ne habozzon kapcsolatba lépni velünk! Az Antlify Consulting Kft-nél a legjobb szoftverfejlesztési tapasztalatot kínáljuk, hogy biztosítsuk az informatikai projektek teljes sikerét.
+At Antlify Consulting Ltd., we take pride in providing exceptional software development and IT solutions to our clients. Our continuous communication and systematic process for handling ongoing engagements ensure that our clients are satisfied with the outcome.
 
+If you're seeking a reliable and efficient partner who delivers high-quality IT services, don't hesitate to get in touch with us! At Antlify Consulting Ltd., we offer the best software development expertise to ensure the success of your IT projects.
 
 
 <div class="flex justify-center">

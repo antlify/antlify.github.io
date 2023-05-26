@@ -1,14 +1,13 @@
 ---
 title: "Top Car Autószervíz"
 meta_title: ""
-description: "A Top Car Autószervíztől kaptunk megbízást egy professzionális weboldal fejlesztésére"
+description: "We were commissioned by Top Car Autószervíz to develop a professional website"
 date: 2020-10-21T05:00:00Z
 image: "/portfolio/topcar.png"
-categories: ["Weboldal"]
+categories: ["Website"]
 tags: ["HTML"]
 domain: "topcarautoszerviz.hu"
 draft: false
 ---
 
-A Top Car Autószervíztől kaptunk megbízást egy professzionális weboldal fejlesztésére, aminek az eredménye egy olyan webes felület, amely remekül tükrözi a cégük arculatát és szakmai hozzáállását.
-
+We were commissioned by Top Car Autószervíz to develop a professional website, resulting in a web interface that beautifully reflects their company's branding and professional approach.

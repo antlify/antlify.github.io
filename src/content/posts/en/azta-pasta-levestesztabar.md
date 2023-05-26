@@ -1,14 +1,13 @@
 ---
-title: "Azta Pasta Leves&Tésztabár"
+title: "Azta Pasta Soup & Pasta Bar"
 meta_title: ""
-description: "A weboldal készítésénél a célunk egy felhasználóbarát felület megalkotása volt"
+description: "Our goal in creating the website was to design a user-friendly interface"
 date: 2020-08-04T05:00:00Z
 image: "/portfolio/aztapasta.png"
-categories: ["Weboldal", "Egyedi fejlesztés", "Grafika"]
+categories: ["Website", "Custom Development", "Graphics"]
 tags: ["PHP"]
 domain: "aztapasta.eu"
 draft: false
 ---
 
-Az Azta Pasta Leves&Tésztabár weboldala egy egyedi és letisztult designnal rendelkező oldal, amelyet különleges a grafikák tesznek még vonzóbbá. A weboldal könnyen áttekinthető és felhasználóbarát, ami elősegíti az online ételrendelési folyamatot.
-
+The Azta Pasta Soup & Pasta Bar website is a unique and sleekly designed site, made even more attractive by its special graphics. The website is easy to navigate and user-friendly, facilitating the online food ordering process.

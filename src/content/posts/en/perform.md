@@ -1,15 +1,13 @@
 ---
 title: "Perform Média"
 meta_title: ""
-description: "A Perform Média weboldala egy letisztult és modern felület"
+description: "The Perform Média website features a clean and modern interface"
 date: 2020-10-01T05:00:00Z
 image: "/portfolio/perform.png"
-categories: ["Weboldal"]
+categories: ["Website"]
 tags: ["WordPress"]
 domain: "perform.hu"
 draft: false
 ---
 
-A Perform Média weboldala egy letisztult és modern felület, amely egyedi fejlesztésű megoldásokat használ a felhasználói élmény és a funkcionalitás javítása érdekében. A weboldal stílusa és dizájnja jól illeszkedik a Perform Média arculatához és szakmai profiljához, amelyet az általuk nyújtott kiemelkedő munka színvonalát mutatja.
-
-
+The Perform Média website features a clean and modern interface, utilizing custom-developed solutions to enhance user experience and functionality. The website's style and design align perfectly with Perform Média's branding and professional profile, showcasing the high level of work they provide.

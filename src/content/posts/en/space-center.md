@@ -1,14 +1,13 @@
 ---
 title: "SPACE Center"
 meta_title: ""
-description: "Egy grafikailag különleges kialakítású weboldal fejlesztését bízták ránk"
+description: "We were entrusted with the development of a visually unique website"
 date: 2020-08-11T05:00:00Z
 image: "/portfolio/space.png"
-categories: ["Weboldal"]
+categories: ["Website"]
 tags: ["WordPress"]
 domain: "spacecenter.hu"
 draft: false
 ---
 
-Egy grafikailag különleges kialakítású weboldal fejlesztését bízták ránk, amely tükrözi a SPACE Center egyediségét, és szakmaiságát. Sikeresen lefejlesztettük ezt a weboldalt, amely azóta is tökéletesen ellátja funkcióit, és könnyen áttekinthető és felhasználóbarát felületet biztosít a vásárlóknak.
-
+We were entrusted with the development of a visually unique website that reflects the uniqueness and professionalism of the SPACE Center. We successfully developed this website, which continues to serve its functions flawlessly, providing customers with an easily navigable and user-friendly interface.

@@ -1,14 +1,13 @@
 ---
-title: "Balatonfüred Concours d’Elegance"
+title: "Balatonfüred Concours d'Elegance"
 meta_title: ""
-description: "elegáns és professzionális online felület"
+description: "elegant and professional online platform"
 date: 2023-04-05T05:00:00Z
 image: "/portfolio/concours.png"
-categories: ["Rendezvény", "Weboldal"]
+categories: ["Event", "Website"]
 tags: ["WordPress", "Gutenberg"]
 domain: "balatonfuredconcours.eu"
 draft: false
 ---
 
-Az általunk fejlesztett Balatonfüred Concours d’Elegance weboldal egy elegáns és professzionális online felület, 
-amely a Balatonfüredi járműkiállítás és szépségverseny információit és eseménynaptárát tartalmazza.
+The Balatonfüred Concours d'Elegance website, developed by us, is an elegant and professional online platform that features information and an event calendar for the Balatonfüred automotive exhibition and beauty contest.

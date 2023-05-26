@@ -18,7 +18,8 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const posts = await getSinglePage(config.settings.blog_folder);
+let posts = await getSinglePage(config.settings.blog_folder);
+posts = posts.filter(post => post.slug.startsWith("hu"));
 const filterByCategories = taxonomyFilter(posts, "tags", tag);
 ---
 

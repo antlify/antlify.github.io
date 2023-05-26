@@ -1,14 +1,13 @@
 ---
 title: "Re-Gym"
 meta_title: ""
-description: "A weboldal készítésénél a célunk egy felhasználóbarát felület megalkotása volt"
+description: "The goal of website development was to create a user-friendly interface"
 date: 2020-08-04T05:00:00Z
 image: "/portfolio/regym.png"
-categories: ["Weboldal"]
+categories: ["Website"]
 tags: ["WordPress"]
 domain: "thaibox.hu"
 draft: false
 ---
 
-A weboldal készítésénél a célunk egy felhasználóbarát felület megalkotása volt, amely egyedi fejlesztésű megoldásokat használ a funkcionalitás és a felhasználói élmény javítása érdekében. A weboldal könnyen navigálható, így az információk megtalálása és a szolgáltatások igénybevétele is egyszerűvé vált az oldal látogatói számára.
-
+The goal of website development was to create a user-friendly interface, utilizing custom-developed solutions to enhance functionality and user experience. The website is easily navigable, making it simple for visitors to find information and avail themselves of the services offered.

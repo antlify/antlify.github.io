@@ -1,14 +1,13 @@
 ---
 title: "Knifeland Europe"
 meta_title: ""
-description: "az egyedi kések európai terjesztésére"
+description: "For the distribution of unique knives in Europe"
 date: 2020-09-10T05:00:00Z
 image: "/portfolio/knifeland.png"
-categories: ["Piactér"]
+categories: ["Marketplace"]
 tags: ["WordPress", "WooCommerce"]
 domain: "knifeland.eu"
 draft: false
 ---
 
-Kialakítottunk egy olyan online piacteret, amely internacionális szinten ellátja feladatát, könnyű a kezelhetősége, és kiemelkedő gyorsasággal rendelkezik. A megrendelő megálmodta, mi pedig elkészítettük a tökéletes weboldalt az egyedi kések európai terjesztésére.
-
+We have created an online marketplace that serves its purpose at an international level, with easy usability and outstanding speed. The client envisioned it, and we delivered the perfect website for the distribution of unique knives in Europe.

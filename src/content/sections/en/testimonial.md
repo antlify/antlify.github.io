@@ -5,20 +5,20 @@ description: "•••"
 
 # Testimonials
 testimonials:
-- name: "Ügyvezető igazgató/tulajdonos"
-  designation: "Sunny FilmStudio Kft."
+- name: "Managing Director/Owner"
+  designation: "Sunny FilmStudio Ltd."
   avatar: "/images/avatar-sm.png"
-  content: "“Szép, gyorsan és jól elkészített honlap. Ajánlom a készítőt.”"
+  content: "“Beautifully designed and well-executed website. I highly recommend the creator.”"
 
-- name: " Www.Topcarautoszerviz.hu"
+- name: "Www.Topcarautoszerviz.hu"
   avatar: "/images/avatar-sm.png"
-  content: "“Szervizünk honlapjának gyorsaságával volt problémánk a google advertshöz! Egy gyors, egyszerű, letisztult honlap lett a végeredmény! Gyorsak és precízek! Mi őket ajánljuk!”"
+  content: "“We had issues with the speed of our service website for Google Ads! The end result was a fast, simple, and clean website! They are quick and precise! We highly recommend them!”"
 
-- name: "Gergely Tihamér"
-  designation: "Zaj Rendszerház – PR és kommunikáció"
+- name: "Tihamér Gergely"
+  designation: "Zaj Rendszerház – PR and Communication"
   avatar: "/images/avatar-sm.png"
-  content: "“Rendkívűli rugalmasság,  segítőkészség jellemzi a céget. Bármilyen ötletünk volt, megoldást találtak rá, nem véletlenül kértük fel őket a cégcsoport több weblapjának létrehozására, fejlesztésére is. Öt csillag, ajánlom.”"
-  
+  content: "“Exceptional flexibility and helpfulness characterize the company. They found solutions to all of our ideas, which is why we invited them to create and develop multiple websites for our company group. Five stars, highly recommended.”"
+
 - name: "Marvin McKinney"
   designation: "Web Designer"
   avatar: "/images/avatar-sm.png"

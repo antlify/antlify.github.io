@@ -2,7 +2,7 @@
 import BlogCard from "@/components/BlogCard.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
+import { getCollection } from "astro:content";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import PageHeader from "@/partials/PageHeader.astro";
@@ -12,7 +12,6 @@ export async function getStaticPaths() {
     config.settings.blog_folder,
     "categories"
   );
-
   return categories.map((category) => {
     return {
       params: { category },
@@ -21,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 const { category } = Astro.params;
-const posts = await getSinglePage(config.settings.blog_folder);
+const posts = await getCollection('posts', entry => entry.slug.startsWith("hu"));
 const filterByCategories = taxonomyFilter(posts, "categories", category);
 ---
 
