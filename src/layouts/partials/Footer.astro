@@ -5,6 +5,11 @@ import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <footer class="bg-theme-light border-t dark:bg-darkmode-theme-light">
@@ -18,7 +23,7 @@ import { markdownify } from "@/lib/utils/textConverter";
           {
             menu.footer.map((menu) => (
               <li class="m-3 inline-block">
-                <a href={menu.url}>{menu.name}</a>
+                <a href={`/${lang}${menu.url}`}>{t(menu.name)}</a>
               </li>
             ))
           }
