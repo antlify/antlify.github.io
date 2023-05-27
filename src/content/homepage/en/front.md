@@ -8,7 +8,7 @@ _— Contact us and let's work together!_"
   button:
     enable: true
     label: "Works"
-    link: "/en/works"
+    link: "/en/posts"
 
 # Features
 features:

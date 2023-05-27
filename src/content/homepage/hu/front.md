@@ -4,11 +4,11 @@ banner:
   title: "Villámgyors, modern weboldalakat készítünk."
   content: "Pixel perfekt webfejlesztés.
 _— Keressen elérhetőségeinken és dolgozzunk együtt!_"
-  image: "/images/banner.svg"
+  image: "/images/banner.png"
   button:
     enable: true
     label: "Portfólió"
-    link: "/hu/works"
+    link: "/hu/posts"
 
 # Features
 features:
