@@ -13,6 +13,9 @@ import {
   FaRegUserCircle,
 } from "react-icons/fa/index.js";
 
+import { getLangFromUrl } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+
 const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
@@ -40,17 +43,20 @@ const { title, description, author, categories, image, date, tags, domain } = po
         }
         <h1 set:html={markdownify(title)} class="h2 mb-4" />
         <ul class="mb-4">
+          <!--
           <li class="mr-4 inline-block">
             <a href={`/authors/${slugify(author)}`}>
               <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
               {humanize(author)}
             </a>
           </li>
+          -->
           <li class="mr-4 inline-block">
+
             <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
             {
               categories.map((category: string, index: number) => (
-                <a href={`/categories/${slugify(category)}`}>
+                <a href={`/${lang}/categories/${slugify(category)}`}>
                   {humanize(category)}
                   {index !== categories.length - 1 && ","}
                 </a>
@@ -75,7 +81,7 @@ const { title, description, author, categories, image, date, tags, domain } = po
                   <li class="inline-block">
                     <a
                       class="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark"
-                      href={`/tags/${slugify(tag)}`}
+                      href={`/${lang}/tags/${slugify(tag)}`}
                     >
                       {humanize(tag)}
                     </a>

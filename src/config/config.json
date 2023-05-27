@@ -7,9 +7,9 @@
     "favicon": "/images/a.svg",
     "logo": "/images/logo.svg",
     "logo_darkmode": "/images/logo-darkmode.svg",
-    "logo_width": "180",
-    "logo_height": "30",
-    "logo_text": "Astroplate"
+    "logo_width": "160",
+    "logo_height": "24",
+    "logo_text": "Antlify"
   },
 
   "settings": {
