@@ -50,7 +50,7 @@ const { title, description, meta_title, image } = entry.data;
               />
             )
           }
-          <h2 set:html={markdownify(title)} class="h3 mb-6" />
+          <h1 set:html={markdownify(title)} class="h3 mb-6 md:text-4xl lg:text-6xl" />
           <div class="content">
             <Content />
           </div>

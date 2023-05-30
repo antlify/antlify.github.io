@@ -1,6 +1,6 @@
 ---
-title: "Hello, this is Antlify!"
-meta_title: "Rólunk"
+title: 'Hello, this is <span class="from-blue-800 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">Antlify!</span>'
+meta_title: "About"
 description: ""
 image: "/images/a.svg"
 draft: false

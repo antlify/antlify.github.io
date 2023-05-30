@@ -1,5 +1,5 @@
 ---
-title: "Hello, ez az Antlify!"
+title: 'Hello, ez az <span class="from-blue-800 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">Antlify!</span>'
 meta_title: "Rólunk"
 description: ""
 image: "/images/a.svg"

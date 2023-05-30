@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Villámgyors, modern weboldalakat készítünk."
+  title: '<span class="from-primary via-blue-700 to-primary dark:to-white dark:from-blue-200 bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">Villámgyors,</span> modern weboldalakat készítünk.'
   content: "Pixel perfekt webfejlesztés.
 _— Keressen elérhetőségeinken és dolgozzunk együtt!_"
   image: "/images/banner.png"
@@ -38,7 +38,7 @@ features:
     button:
       enable: true
       label: "Részletek"
-      link: "/regular"
+      link: "/hu/regular"
 
   - title: "Nemzetközi megbízások"
     image: "/images/service-3.png"

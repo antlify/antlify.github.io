@@ -9,7 +9,7 @@ export const ui = {
   en: {
     'nav.home': 'Home',
     'nav.about': 'About',
-    'nav.posts': 'Works',
+    'nav.posts': 'Portfolio',
     'nav.services': 'Services',
     'nav.website': 'Website development',
     'nav.webshop': 'Webshop operation',

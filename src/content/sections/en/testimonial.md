@@ -19,8 +19,4 @@ testimonials:
   avatar: "/images/avatar-sm.png"
   content: "“Exceptional flexibility and helpfulness characterize the company. They found solutions to all of our ideas, which is why we invited them to create and develop multiple websites for our company group. Five stars, highly recommended.”"
 
-- name: "Marvin McKinney"
-  designation: "Web Designer"
-  avatar: "/images/avatar-sm.png"
-  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iusto illo molestias, assumenda expedita commodi inventore non itaque molestiae voluptatum dolore, facilis sapiente, repellat veniam."
 ---
