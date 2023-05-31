@@ -8,7 +8,108 @@ import {
   FaSearch,
 } from "react-icons/fa/index.js";
 
+type LanguageStrings = {
+  [key: string]: {
+    placeholder: string;
+    h1: {
+      true: string;
+      false: string;
+    };
+    p: {
+      true: string;
+      false: string;
+    };
+    // további kulcs-érték párok
+  };
+};
+
 const { summary_length, blog_folder } = config.settings;
+
+const stringSS: LanguageStrings = {
+  en: {
+    placeholder: "Search Posts",
+    h1: {
+      true: "Search in Our Portfolio",
+      false: "No Results Found!",
+    },
+    p: {
+      true: "Search for posts by title, category, or tag.",
+      false:
+        "We couldn't find what you were looking for. Please try searching again.",
+    },
+  },
+  hu: {
+    placeholder: "Bejegyzések keresése",
+    h1: {
+      true: "Keresés a portfóliónkban",
+      false: "Nincs találat!",
+    },
+    p: {
+      true: "Keressen bejegyzéseket cím, kategória vagy címke alapján.",
+      false: "Nem találtuk, amit keresett. Próbáljon újra keresni.",
+    },
+  },
+  de: {
+    placeholder: "Beiträge suchen",
+    h1: {
+      true: "Suche in unserem Portfolio",
+      false: "Keine Ergebnisse gefunden!",
+    },
+    p: {
+      true: "Suche nach Beiträgen nach Titel, Kategorie oder Tag.",
+      false:
+        "Wir konnten nicht finden, wonach Sie gesucht haben. Bitte versuchen Sie es erneut.",
+    },
+  },
+  es: {
+    placeholder: "Buscar publicaciones",
+    h1: {
+      true: "Buscar en nuestro portafolio",
+      false: "¡No se encontraron resultados!",
+    },
+    p: {
+      true: "Busque publicaciones por título, categoría o etiqueta.",
+      false:
+        "No pudimos encontrar lo que buscaba. Por favor, intente buscar nuevamente.",
+    },
+  },
+  fr: {
+    placeholder: "Rechercher des articles",
+    h1: {
+      true: "Recherche dans notre portefeuille",
+      false: "Aucun résultat trouvé !",
+    },
+    p: {
+      true: "Recherchez des articles par titre, catégorie ou balise.",
+      false:
+        "Nous n'avons pas trouvé ce que vous cherchiez. Veuillez réessayer la recherche.",
+    },
+  },
+  it: {
+    placeholder: "Cerca articoli",
+    h1: {
+      true: "Cerca nel nostro portafoglio",
+      false: "Nessun risultato trovato!",
+    },
+    p: {
+      true: "Cerca articoli per titolo, categoria o tag.",
+      false:
+        "Non siamo riusciti a trovare ciò che stavi cercando. Riprova a effettuare la ricerca.",
+    },
+  },
+  ro: {
+    placeholder: "Caută articole",
+    h1: {
+      true: "Caută în portofoliul nostru",
+      false: "Nu s-au găsit rezultate!",
+    },
+    p: {
+      true: "Caută articole după titlu, categorie sau etichetă.",
+      false:
+        "Nu am putut găsi ceea ce căutați. Vă rugăm să încercați să căutați din nou.",
+    },
+  },
+};
 
 export type SearchItem = {
   slug: string;
@@ -18,6 +119,7 @@ export type SearchItem = {
 
 interface Props {
   searchList: SearchItem[];
+  lang: string;
 }
 
 interface SearchResult {
@@ -25,7 +127,7 @@ interface SearchResult {
   refIndex: number;
 }
 
-const Search = ({ searchList }: Props) => {
+const Search = ({ searchList, lang }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -75,7 +177,7 @@ const Search = ({ searchList }: Props) => {
             <div className="flex flex-nowrap">
               <input
                 className="form-input rounded-r-none"
-                placeholder="Bejegyzések keresése"
+                placeholder={stringSS[lang]["placeholder"]}
                 type="search"
                 name="search"
                 value={inputVal}
@@ -109,12 +211,14 @@ const Search = ({ searchList }: Props) => {
                 alt="no-search-found"
               />
               <h1 className="h2 mb-4">
-                {inputVal.length < 1 ? "Keresés a portfóliónkban" : "Nincs találat!"}
+                {inputVal.length < 1
+                  ? stringSS[lang]["h1"]["true"]
+                  : stringSS[lang]["h1"]["false"]}
               </h1>
               <p>
                 {inputVal.length < 1
-                  ? "Keressen bejegyzéseket cím, kategória vagy címke alapján."
-                  : "Nem találtuk, amit keresett. Próbáljon újra keresni."}
+                  ? stringSS[lang]["p"]["true"]
+                  : stringSS[lang]["p"]["false"]}
               </p>
             </div>
           ) : (
@@ -131,13 +235,13 @@ const Search = ({ searchList }: Props) => {
                     />
                   )}
                   <h4 className="mb-3">
-                    <a href={`/${blog_folder}/${item.slug}`}>
+                    <a href={`/${lang}/${blog_folder}/${item.slug.split('/')[1]}`}>
                       {item.data.title}
                     </a>
                   </h4>
                   <ul className="mb-4">
                     <li className="mr-4 inline-block">
-                      <a href={`/authors/${slugify(item.data.author)}`}>
+                      <a href={`/${lang}/authors/${slugify(item.data.author)}`}>
                         <FaRegUserCircle
                           className={"-mt-1 mr-2 inline-block"}
                         />
@@ -149,7 +253,7 @@ const Search = ({ searchList }: Props) => {
                       {item.data.categories.map(
                         (category: string, index: number) => (
                           <a
-                            href={`/categories/${slugify(category)}`}
+                            href={`/${lang}/categories/${slugify(category)}`}
                             key={category}
                           >
                             {humanize(category)}
@@ -164,7 +268,7 @@ const Search = ({ searchList }: Props) => {
                   </p>
                   <a
                     className="btn btn-outline-primary btn-sm"
-                    href={`/${blog_folder}/${item.slug}`}
+                    href={`/${lang}/${blog_folder}/${item.slug.split('/')[1]}`}
                   >
                     read more
                   </a>

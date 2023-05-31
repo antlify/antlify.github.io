@@ -1,0 +1,44 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntryBySlug } from "astro:content";
+
+const entry = await getEntryBySlug("pages", "hu/contact");
+const { contact_form_action } = config.params;
+const { title, description, meta_title, image } = entry.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+
+  <PageHeader title={title} meta_title={meta_title}/>
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mx-auto md:col-4 lg:col-4">
+          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
+            <h4>Correo electrónico</h4>
+            <p class="mt-3"><a href="mailto:info@antlify.hu">info@antlify.hu</a></p>
+          </div>
+        </div>
+        <div class="text-center mx-auto md:col-4 lg:col-4">
+          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
+            <h4>Teléfono</h4>
+            <p class="mt-3"><a href="tel:+36305495237">+36 30 549 52 37</a></p>
+          </div>
+        </div>
+        <div class="text-center mx-auto md:col-4 lg:col-4">
+          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
+            <h4>Número de identificación fiscal</h4>
+            <p class="mt-3">32119279-1-43</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -25,7 +25,7 @@ features:
     - "Tartalom feltöltés és manuális tesztelés."
     button:
       enable: false
-      label: "Get Started Now"
+      label: "Kezdés most"
       link: "#"
 
   - title: "Rendszeres projekt megbízások"
@@ -38,16 +38,16 @@ features:
     button:
       enable: true
       label: "Részletek"
-      link: "/regular"
+      link: "/hu/regular"
 
   - title: "Nemzetközi megbízások"
     image: "/images/service-3.png"
     content: "Több éves szakmai tapasztalattal és nagyszerű csapattal, a nemzetközi piacon is kipróbált tudással vállaljuk itthoni és külföldi megbízásainkat."
     bulletpoints:
-    - "Instantly load static sites for better user experience and SEO."
-    - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-    - "Use any front-end library or framework, or build custom components, for any project size."
-    - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+    - "Azonnali betöltés statikus webhelyeknél a jobb felhasználói élmény és a SEO érdekében."
+    - "Intuitív szintaxis és támogatás a népszerű keretrendszerekhez, amelyek könnyűvé teszik az Astro tanulását és használatát."
+    - "Használjon bármilyen front-end könyvtárat vagy keretrendszert, vagy építsen egyedi komponenseket, bármilyen projektméret esetén."
+    - "A legfrissebb webes szabványokkal lépést tartó, csúcstechnológián alapuló projekt."
     button:
       enable: false
       label: ""
