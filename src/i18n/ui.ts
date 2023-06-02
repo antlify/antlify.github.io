@@ -2,10 +2,10 @@ export const languages = {
   hu: 'Magyar',
   en: 'English',
   de: 'Deutsch',
-  es: 'Español',
-  fr: 'Français',
-  it: 'Italiano',
-  ro: 'Română',
+  //es: 'Español',
+  //fr: 'Français',
+  //it: 'Italiano',
+  //ro: 'Română',
 };
 
 export const defaultLang = 'hu';
