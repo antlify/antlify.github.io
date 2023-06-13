@@ -1,0 +1,37 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PostSingle from "@/layouts/PostSingle.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', entry => entry.slug.startsWith("it"));
+
+  const paths = posts.map((post) => {
+    const [langcode, ...slug] = post.slug.split('/');
+    return {
+        params: {
+        single: slug.toString(),
+      },
+      props: { post },
+    }
+  });
+  return paths;
+}
+
+const { post } = Astro.props;
+const { title, meta_title, description, image } = post.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PostSingle post={post} />
+</Base>
