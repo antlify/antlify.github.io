@@ -44,10 +44,10 @@ features:
     image: "/images/service-3.png"
     content: "Több éves szakmai tapasztalattal és nagyszerű csapattal, a nemzetközi piacon is kipróbált tudással vállaljuk itthoni és külföldi megbízásainkat."
     bulletpoints:
-    - "Instantly load static sites for better user experience and SEO."
-    - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-    - "Use any front-end library or framework, or build custom components, for any project size."
-    - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+    - "A legújabb technológiák és iparági standardok alkalmazásával biztosítunk magas minőséget."
+    - "Rugalmas üzleti megoldások, amelyek személyre szabottak az ügyfelek igényeinek és kihívásainak figyelembevételével."
+    - "Eredményorientált megközelítés, amely a hatékony és erős ügyfélkapcsolatok kiépítésére összpontosít."
+    - "Rendszeres fejlesztések és innováció, a legújabb és legjobb megoldásokat kínáljuk ügyfeleinknek."
     button:
       enable: false
       label: ""

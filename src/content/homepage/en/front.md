@@ -44,10 +44,10 @@ features:
     image: "/images/service-3.png"
     content: "With several years of professional experience and an excellent team, we undertake both domestic and international projects, utilizing our proven knowledge and expertise."
     bulletpoints:
-    - "Instantly load static sites for better user experience and SEO."
-    - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-    - "Use any front-end library or framework, or build custom components, for any project size."
-    - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+    - "We ensure high quality by applying the latest technologies and industry standards."
+    - "Flexible business solutions that are tailored to the needs and challenges of customers."
+    - "A results-oriented approach focused on building effective and strong customer relationships."
+    - "Regular developments and innovation, we offer our customers the latest and best solutions."
     button:
       enable: false
       label: ""
