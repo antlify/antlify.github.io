@@ -28,15 +28,17 @@ jobs:
         # package-manager: yarn # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
   deploy:
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: 📂 Sync files
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.ftp_server }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+
