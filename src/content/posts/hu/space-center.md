@@ -10,5 +10,5 @@ domain: "spacecenter.hu"
 draft: false
 ---
 
-Egy grafikailag különleges kialakítású weboldal fejlesztését bízták ránk, amely tükrözi a SPACE Center egyediségét, és szakmaiságát. Sikeresen lefejlesztettük ezt a weboldalt, amely azóta is tökéletesen ellátja funkcióit, és könnyen áttekinthető és felhasználóbarát felületet biztosít a vásárlóknak.
+Egy grafikailag különleges kialakítású weboldal fejlesztését bízták ránk, amely tükrözi a SPACE Center egyediségét és szakmaiságát. Sikeresen lefejlesztettük ezt a weboldalt, amely azóta is tökéletesen ellátja funkcióit, és könnyen áttekinthető és felhasználóbarát felületet biztosít a vásárlóknak.
 
