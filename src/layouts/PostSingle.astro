@@ -16,10 +16,21 @@ import {
 import { getLangFromUrl } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 
+const textRelated = {
+  "hu":"Kapcsolódó bejegyzések",
+  "en":"Related posts",
+  "es":"Publicaciones relacionadas",
+  "de":"Ähnliche Beiträge",
+  "it":"Post correlati",
+  "fr":"Articles similaires",
+  "ro":"Postări similare"
+}
+
 const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
-const similarPosts = similerItems(post, posts, post.slug);
+const similarPostUnfiltered = similerItems(post, posts, post.slug);
+const similarPosts = similarPostUnfiltered.filter((post) => post.slug.startsWith(lang));
 const { Content } = await post.render();
 const { title, description, author, categories, image, date, tags, domain } = post.data;
 ---
@@ -105,10 +116,10 @@ const { title, description, author, categories, image, date, tags, domain } = po
 
     <!-- Related posts -->
     <div class="section pb-0">
-      <h2 class="h3 mb-12 text-center">Related Posts</h2>
+      <h2 class="h3 mb-12 text-center">{textRelated[lang]}</h2>
       <div class="row justify-center">
         {
-          similarPosts.map((post) => (
+          similarPosts.slice(0, 3).map((post) => (
             <div class="lg:col-4">
               <BlogCard data={post} />
             </div>
