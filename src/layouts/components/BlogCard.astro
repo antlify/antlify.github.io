@@ -27,7 +27,7 @@ const [langcode, ...slug] = data.slug.split('/');
      <li class="mr-4 inline-block">
        {
          categories.map((category: string, index: number) => (
-           <a href={`/categories/${slugify(category)}`}>
+           <a href={`/${langcode}/categories/${slugify(category)}`}>
              {humanize(category)}
              {index !== categories.length - 1 && ","}
            </a>
