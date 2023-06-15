@@ -10,5 +10,5 @@ domain: "cafe.zaj.hu"
 draft: false
 ---
 
-A ZAJ Café weboldala egy modern és stílusos online felület, amely a kiemelkedő budapesti kávézó információit és ajánlatait tartalmazza. A weboldal könnyen kezelhető, és intuitív felépítése révén a felhasználók számára egyszerűen navigálható.
+A ZAJ Café weboldala egy modern és stílusos online felület, amely a kiemelkedő budapesti kávézó információit és ajánlatait tartalmazza. A weboldal könnyen kezelhető és intuitív felépítése révén a felhasználók számára egyszerűen navigálható.
 
