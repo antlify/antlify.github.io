@@ -1,6 +1,6 @@
 ---
 title: "Webáruház üzemeltetés"
-meta_title: "Belső rendszerek fejlesztése"
+meta_title: "Webáruház üzemeltetés"
 description: "Keresi az ideális megoldást, hogy vállalkozása egyre hatékonyabban működjön?"
 draft: false
 ---
