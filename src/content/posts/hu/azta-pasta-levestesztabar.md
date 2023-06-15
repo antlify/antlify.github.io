@@ -10,5 +10,5 @@ domain: "aztapasta.eu"
 draft: false
 ---
 
-Az Azta Pasta Leves&Tésztabár weboldala egy egyedi és letisztult designnal rendelkező oldal, amelyet különleges a grafikák tesznek még vonzóbbá. A weboldal könnyen áttekinthető és felhasználóbarát, ami elősegíti az online ételrendelési folyamatot.
+Az Azta Pasta Leves&Tésztabár weboldala egy egyedi és letisztult designnal rendelkező oldal, amelyet különleges a grafikák tesznek még vonzóbbá. A weboldal könnyen áttekinthető és felhasználóbarát, ezzel elősegítve az online ételrendelési folyamatot.
 
