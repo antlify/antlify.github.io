@@ -146,6 +146,28 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNQSL3M9J3"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZNQSL3M9J3');
+    </script>
+
+    <!-- Hotjar Tracking Code for https://antlify.hu/ -->
+    <script is:inline>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3537915,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
   </head>
   <body>
     <TwSizeIndicator />
