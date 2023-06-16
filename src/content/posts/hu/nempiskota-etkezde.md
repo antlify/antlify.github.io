@@ -10,5 +10,5 @@ domain: "nempiskota.eu"
 draft: false
 ---
 
-A feladatunk egy családias, könnyen kezelhető és átlátható, mégis professzionális weboldal elkészítése volt, melyet sikerült elkészítenünk pont olyanra, amilyenre a megrendelő megálmodta.
+A feladatunk egy családias étterem, könnyen kezelhető és átlátható, mégis professzionális weboldalának elkészítése volt. Az eredmény pedig az lett, amit a megrendelő megálmodott.
 

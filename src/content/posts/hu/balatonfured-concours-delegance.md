@@ -11,4 +11,4 @@ draft: false
 ---
 
 Az általunk fejlesztett Balatonfüred Concours d’Elegance weboldal egy elegáns és professzionális online felület, 
-amely a Balatonfüredi járműkiállítás és szépségverseny információit és eseménynaptárát tartalmazza.
+amely a balatonfüredi járműkiállítás és szépségverseny információit és eseménynaptárát tartalmazza.

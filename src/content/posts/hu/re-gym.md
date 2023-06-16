@@ -10,5 +10,5 @@ domain: "thaibox.hu"
 draft: false
 ---
 
-A weboldal készítésénél a célunk egy felhasználóbarát felület megalkotása volt, amely egyedi fejlesztésű megoldásokat használ a funkcionalitás és a felhasználói élmény javítása érdekében. A weboldal könnyen navigálható, így az információk megtalálása és a szolgáltatások igénybevétele is egyszerűvé vált az oldal látogatói számára.
+A weboldal készítésénél a célunk egy felhasználóbarát felület megalkotása volt, amely egyedi fejlesztésű megoldásokat használ a funkcionalitás és a felhasználói élmény javítása érdekében. A weboldal könnyen navigálható, így az információk megtalálása és a szolgáltatások igénybevétele is egyszerű az oldal látogatói számára.
 

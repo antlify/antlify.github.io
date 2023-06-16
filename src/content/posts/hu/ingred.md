@@ -10,5 +10,5 @@ domain: "ingred.hu"
 draft: false
 ---
 
-Belső rendszer fejlesztés, amely az rendezvényszervezéssel foglalkozó vállalkozás szolgáltatásait segíti elő. A weboldal könnyen használható, és navigációja logikus felépítésű, és a dizájn letisztult.
+Belső rendszer fejlesztés, amely a rendezvényszervezéssel foglalkozó vállalkozások működését segíti elő. A weboldal könnyen kezelhető, a navigációja logikus felépítésű és a dizájn letisztult.
 

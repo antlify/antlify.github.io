@@ -10,5 +10,5 @@ domain: "knifeland.eu"
 draft: false
 ---
 
-Kialakítottunk egy olyan online piacteret, amely internacionális szinten ellátja feladatát, könnyű a kezelhetősége, és kiemelkedő gyorsasággal rendelkezik. A megrendelő megálmodta, mi pedig elkészítettük a tökéletes weboldalt az egyedi kések európai terjesztésére.
+Kialakítottunk egy olyan online piacteret, amely nemzetközi szinten ellátja feladatát, könnyen kezelhető és kiemelkedő gyorsasággal rendelkezik. A megrendelő megálmodta, mi pedig elkészítettük a tökéletes weboldalt az egyedi kések európai értékesítésére.
 

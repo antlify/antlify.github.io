@@ -10,5 +10,5 @@ domain: "automagazinonline.hu"
 draft: false
 ---
 
-_„az autórajongók és autóvásárlók szaklapja”_ nyomtatott újságban. Az autóMAGAZIN weboldalának és belső rendszerének fejlesztésére kaptunk megbízást.
+_„Az autórajongók és autóvásárlók szaklapja”_ nyomtatott formában. Az autóMAGAZIN weboldalának és belső rendszerének fejlesztésére kaptunk megbízást.
 
