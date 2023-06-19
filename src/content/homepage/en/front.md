@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: 'We create <span class="from-primary via-blue-700 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">blazing-fast,</span> modern websites.'
+  title: 'We create <span class="from-dark-100 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">blazing-fast,</span> modern websites.'
   content: "Pixel perfect web development.
 _— Experience the new generation of web design!_"
   image: "/images/banner.png"
