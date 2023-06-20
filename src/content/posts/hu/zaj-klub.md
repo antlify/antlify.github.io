@@ -10,5 +10,5 @@ domain: "klub.zaj.hu"
 draft: false
 ---
 
-A ZAJ közösség nosztalgikus hangulatú közösségi portál fejlesztésére kaptunk felkérést, az eredmény egy átlátható, könnyen kezelhető oldal lett.
+A ZAJ Klub felkérésére létrehoztunk egy nosztalgikus hangulatú közösségi oldalt a látogatóik számára. Az eredmény egy átlátható, könnyen kezelhető oldal lett.
 
