@@ -13,6 +13,7 @@ const [langcode, ...slug] = data.slug.split('/');
 <div class="bg-body dark:bg-darkmode-body mb-12">
   {
     image && (
+      <a href={`/${langcode}/${blog_folder}/${slug}`}>
       <Image
         class="mb-6 w-full rounded"
         src={image}
@@ -20,6 +21,7 @@ const [langcode, ...slug] = data.slug.split('/');
         width={590}
         height={200}
       />
+      </a>
     )
   }
 
@@ -27,7 +29,7 @@ const [langcode, ...slug] = data.slug.split('/');
      <li class="mr-4 inline-block">
        {
          categories.map((category: string, index: number) => (
-           <a href={`/${langcode}/categories/${slugify(category)}`}>
+           <a rel="prefetch" href={`/${langcode}/categories/${slugify(category)}`}>
              {humanize(category)}
              {index !== categories.length - 1 && ","}
            </a>
