@@ -8,6 +8,8 @@ import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
+import cookieconsent from "@jop-software/astro-cookieconsent";
+import { cookieConsentConfig } from "./src/i18n/cookie";
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,6 +37,7 @@ export default defineConfig({
       ],
     }),
     mdx(),
+    cookieconsent(cookieConsentConfig),
   ],
   markdown: {
     remarkPlugins: [
