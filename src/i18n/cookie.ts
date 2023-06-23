@@ -33,7 +33,7 @@ export const cookieConsentConfig = {
   languages: {
     'en': {
       consent_modal: {
-        title: ' We use cookies! ',
+        title: 'We use cookies! 🍪',
         description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
         primary_btn: {
           text: 'Accept all',
@@ -108,7 +108,7 @@ export const cookieConsentConfig = {
     },
     'hu': {
       consent_modal: {
-        title: 'Az oldalon sütiket használunk!',
+        title: 'Az oldalon sütiket használunk! 🍪',
         description: 'Üdvözöljük! Ez a weboldal alapvető sütiket használ az optimális működés érdekében, valamint egyéb sütiket azzal a céllal, hogy megismerjük, hogyan használják a weboldalt. Az utóbbiak csak beleegyezés után lesznek beállítva. <button type="button" data-cc="c-settings" class="cc-link">Testreszabás</button>',
         primary_btn: {
           text: 'Összes elfogadása',
@@ -185,7 +185,7 @@ export const cookieConsentConfig = {
     },
     'de': {
       consent_modal: {
-        title: 'Wir verwenden Cookies!',
+        title: 'Wir verwenden Cookies! 🍪',
         description: 'Hallo, diese Website verwendet essentielle Cookies, um einen reibungslosen Betrieb zu gewährleisten, sowie Tracking-Cookies, um zu verstehen, wie Sie damit interagieren. Letztere werden nur nach Ihrer Zustimmung gesetzt. <button type="button" data-cc="c-settings" class="cc-link">Lass mich wählen</button>',
         primary_btn: {
           text: 'Alle akzeptieren',
@@ -210,7 +210,7 @@ export const cookieConsentConfig = {
         ],
         blocks: [
           {
-            title: 'Cookie-Nutzung 📢',
+            title: 'Cookie-Nutzung',
             description: 'Ich verwende Cookies, um die grundlegenden Funktionen der Website zu gewährleisten und Ihr Online-Erlebnis zu verbessern. Sie können für jede Kategorie selbst entscheiden, ob Sie zustimmen oder ablehnen möchten. Weitere Informationen zu Cookies und anderen sensiblen Daten finden Sie in der vollständigen <a href="https://antlify.hu/en/gdpr" class="cc-link">Datenschutzerklärung</a>.',
           }, {
             title: 'Unbedingt erforderliche Cookies',
