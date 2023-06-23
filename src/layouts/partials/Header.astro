@@ -86,6 +86,7 @@ const { pathname } = Astro.url;
                   {menu.children?.map((child) => (
                     <li class="nav-dropdown-item">
                       <a
+                        rel="prefetch"
                         href={`/${lang}${child.url}`}
                         class={`nav-dropdown-link block ${
                           (pathname === `${child.url}/` ||
@@ -102,6 +103,7 @@ const { pathname } = Astro.url;
             ) : (
               <li class="nav-item">
                 <a
+                  rel="prefetch"
                   href={`/${lang}${menu.url}`}
                   class={`nav-link block ${
                     (pathname === `${menu.url}/` || pathname === menu.url) &&
@@ -119,6 +121,7 @@ const { pathname } = Astro.url;
         navigation_button.enable && (
           <li class="mt-4 inline-block lg:hidden">
             <a
+              rel="prefetch"
               class="btn btn-outline-primary btn-sm"
               href={navigation_button.link}
             >
@@ -134,6 +137,7 @@ const { pathname } = Astro.url;
       {
         settings.search && (
           <a
+            rel="prefetch"
             class="mr-1 md:mr-3 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
             href={`/${lang}/search`}
             aria-label="search"
@@ -149,6 +153,7 @@ const { pathname } = Astro.url;
       {
         navigation_button.enable && (
           <a
+            rel="prefetch"
             class="ml-5 btn btn-outline-primary btn-sm hidden lg:inline-block"
             href={`/${lang}${navigation_button.link}`}
           >
