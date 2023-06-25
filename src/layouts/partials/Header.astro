@@ -123,9 +123,9 @@ const { pathname } = Astro.url;
             <a
               rel="prefetch"
               class="btn btn-outline-primary btn-sm"
-              href={navigation_button.link}
+              href={`/${lang}${navigation_button.link}`}
             >
-              {navigation_button.label}
+              {t(navigation_button.label)}
             </a>
           </li>
         )

@@ -30,5 +30,5 @@
 }
 
 #langbox:checked ~ #langboxmenu {
-  opacity: 1;
+  display: inherit;
 }

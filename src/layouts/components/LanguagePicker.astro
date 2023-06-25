@@ -20,7 +20,7 @@ const currentPath = Astro.url.pathname.replace(new RegExp(`\/${lang}`), '');
       </svg>
     </span>
     </label>
-    <div id="langboxmenu" class="absolute mt-1 right-1 top-full min-w-max opacity-0 transition delay-75 ease-in-out z-10 absolute right-0 z-10 mt-2 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden back-g-900">
+    <div id="langboxmenu" class="absolute mt-1 right-1 top-full min-w-max hidden transition delay-75 ease-in-out z-10 absolute right-0 z-10 mt-2 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden back-g-900">
       <ul class="block text-right text-g-900">
         {Object.entries(languages).map(([lang, label]) => (
           <li><a href={`/${lang}/`} class="block text-g-700 block px-4 py-2 text-sm back-g-800">{label}</a></li>

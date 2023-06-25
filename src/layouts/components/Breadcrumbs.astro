@@ -1,6 +1,8 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
 const { className, meta_title, title } = Astro.props;
 
 const paths = Astro.url.pathname.split("/").filter((x) => x);
@@ -15,7 +17,7 @@ let parts = [
 paths.shift();
 
 paths.forEach((path, index) => {
-  const href = `/${paths.slice(0, index + 1).join("/")}`;
+  const href = `/${lang}/${paths.slice(0, index + 1).join("/")}`;
   path !== "page" &&
     parts.push({
       label: meta_title || title,
