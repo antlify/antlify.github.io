@@ -24,17 +24,18 @@ const { banner, features } = homepage.data;
   <section class="section pt-14">
     <div class="container">
       <div class="row justify-left">
-        <div class="mb-16 text-left md:col-9 lg:col-10">
-          <h1 set:html={markdownify(banner.title)} class="mb-4 md:text-5xl lg:text-7xl bg-gradient-to-br from-slate-900 to-primary bg-clip-text text-transparent" />
-          <p set:html={markdownify(banner.content)} class="mb-8 prose-xl" />
-          {
-            banner.button.enable && (
-              <a class="inline-flex items-center justify-center w-full px-5 py-3 font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href={banner.button.link}>
-                {banner.button.label}
-              </a>
-            )
-          }
-
+        <div class="mb-16 text-left">
+          <div class="aether-zoom bg-primary text-white p-12 rounded-3xl lg:p-16 xl:p-24">
+            <h1 set:html={markdownify(banner.title)} class="mb-4 md:text-5xl lg:text-7xl text-white" />
+            <p set:html={markdownify(banner.content)} class="mb-8 prose-xl" />
+            {
+              banner.button.enable && (
+                <a class="inline-flex items-center justify-center w-full px-5 py-3 font-medium text-center text-gray-100 hover:text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:border-blue-300 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href={banner.button.link}>
+                  {banner.button.label}
+                </a>
+              )
+            }
+          </div>
         </div>
         {
           banner.image && (
