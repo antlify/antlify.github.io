@@ -15,3 +15,10 @@
 @layer utilities {
   @import "utilities";
 }
+
+.aether-zoom {
+  background-image: url("aether.svg");
+  background-size: 150%;
+  background-position: center center;
+  @apply shadow-xl
+}

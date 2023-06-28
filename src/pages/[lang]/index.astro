@@ -32,6 +32,7 @@ const { banner, features } = homepage.data;
     <div class="container">
       <div class="row justify-left">
         <div class="mb-16 text-left md:col-9 lg:col-10">
+          <div class="aether-zoom bg-primary">
           <h1 set:html={markdownify(banner.title)} class="mb-4 md:text-5xl lg:text-7xl bg-gradient-to-br from-slate-900 to-primary bg-clip-text text-transparent" />
           <p set:html={markdownify(banner.content)} class="mb-8 prose-xl" />
           {
@@ -42,6 +43,7 @@ const { banner, features } = homepage.data;
             )
           }
 
+          </div>
         </div>
         {
           banner.image && (

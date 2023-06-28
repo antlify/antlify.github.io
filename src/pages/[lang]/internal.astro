@@ -1,0 +1,114 @@
+---
+import { Image } from "@astrojs/image/components";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
+import Reveal from 'reveal.js';
+import Team from "@/partials/Team.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+
+export async function getStaticPaths() {
+  const paramsArray = Object.keys(languages).map(lang => {
+    return { params: { lang } };
+  });
+  return paramsArray;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const entry = await getEntryBySlug("pages", lang + "/internal");
+const { Content } = await entry.render();
+const { title, description, meta_title, image } = entry.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <section class="section-sm pt-5">
+    <div class="container">
+        <div class="grid text-dark dark:text-white">
+          <div class="m-auto flex flex-col items-center gap-6 p-6 lg:flex-row lg:gap-0">
+
+            <div class="relative flex w-full flex-1 items-center lg:basis-[600px] lg:text-right">
+              <div class="flex-1 lg:pr-6">
+                <h2 class="md:text-3xl lg:text-4xl xl:text-5xl font-bold">Egyedi fejlesztésű vállalatirányítási megoldások</h2>
+              </div>
+              <div class="top-1/2 mt-2 hidden h-2 w-16 bg-primary lg:block"></div>
+            </div>
+
+            <ul class="lg:basis-[750px]">
+              <li class="group relative py-6">
+                <div class="absolute inset-0 hidden w-2 bg-primary group-first:top-1/2 group-last:bottom-1/2 lg:block"></div>
+                <div class="items-center gap-6 lg:flex">
+                  <div class="relative mb-4 lg:mb-0 lg:pl-16">
+                    <div class="absolute left-0 top-1/2 hidden h-2 w-full bg-primary lg:block"></div>
+                    <div class="relative grid h-24 w-24 rounded-full border border-solid border-primary bg-primary text-white">
+                      <svg class="m-auto block h-full max-h-12 w-full" fill="currentColor" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 class="mb-2 text-xl font-bold">Hatékonyabb vállalati folyamatok</h3>
+                    <p class="opacity-75">Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group relative py-6">
+                <div class="absolute inset-0 hidden w-2 bg-primary group-first:top-1/2 group-last:bottom-1/2 lg:block"></div>
+                <div class="items-center gap-6 lg:flex">
+                  <div class="relative mb-4 lg:mb-0 lg:pl-16">
+                    <div class="absolute left-0 top-1/2 hidden h-2 w-full bg-primary lg:block"></div>
+                    <div class="relative grid h-24 w-24 rounded-full border border-solid border-primary bg-primary text-white">
+                      <svg class="m-auto block h-full max-h-12 w-full" fill="currentColor" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0zM5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4H5z"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 class="mb-2 text-xl font-bold">Létező rendszerek összekapcsolása</h3>
+                    <p class="opacity-75">Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group relative py-6">
+                <div class="absolute inset-0 hidden w-2 bg-primary group-first:top-1/2 group-last:bottom-1/2 lg:block"></div>
+                <div class="items-center gap-6 lg:flex">
+                  <div class="relative mb-4 lg:mb-0 lg:pl-16">
+                    <div class="absolute left-0 top-1/2 hidden h-2 w-full bg-primary lg:block"></div>
+                    <div class="relative grid h-24 w-24 rounded-full bg-primary shadow text-white">
+                      <svg class="m-auto block h-full max-h-12 w-full" fill="currentColor" height="16" width="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 class="mb-2 text-xl font-bold">Adminisztrációs felületek létrehozása</h3>
+                    <p class="opacity-75">Lorem ipsum dolor sit amet consectetur. Consequat sollicitudin in euismod dolor, nec sodales viverra.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      <div class="row justify-center">
+        <div class="md:col-10 lg:col-7">
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>

@@ -6,6 +6,7 @@ import { getEntryBySlug } from "astro:content";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { languages } from "../../i18n/ui";
 import Reveal from 'reveal.js';
+import Team from "@/partials/Team.astro";
 
 export async function getStaticPaths() {
   const paramsArray = Object.keys(languages).map(lang => {
@@ -38,11 +39,17 @@ const { title, description, meta_title, image } = entry.data;
   <section class="section-sm">
     <div class="container">
       <div class="row justify-center">
-        <div class="text-center md:col-10 lg:col-7">
+        <h1 set:html={markdownify(title)} class="mb-6 md:text-4xl lg:text-5xl xl:text-6xl" />
+        <div class="md:col-8 lg:col-7">
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+        <div class="md:col-3 lg:col-4">
           {
             image && (
               <img
-                class="mx-auto mb-6 rounded-lg bg-slate-100 p-6"
+                class="mx-auto mt-12 rounded-lg bg-slate-100 p-6"
                 src={image}
                 width={200}
                 height={200}
@@ -50,12 +57,16 @@ const { title, description, meta_title, image } = entry.data;
               />
             )
           }
-          <h1 set:html={markdownify(title)} class="h3 mb-6 md:text-4xl lg:text-6xl" />
-          <div class="content">
-            <Content />
+
+          <div class="text-center pt-12">
+            <a class="btn btn-outline" href={`/${lang}/contact`}>{t('sidebar.button')}</a>
           </div>
         </div>
       </div>
+
+
+      <Team />
+
     </div>
   </section>
 </Base>

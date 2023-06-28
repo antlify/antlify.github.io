@@ -2,11 +2,22 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
-import { getEntryBySlug } from "astro:content";
+import {getEntryBySlug} from "astro:content";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { languages } from "../../i18n/ui";
+import social from "@/config/social.json";
 
+const {
+  linkedin,
+  github,
+} = social;
 const entry = await getEntryBySlug("pages", "hu/contact");
-const { contact_form_action } = config.params;
-const { title, description, meta_title, image } = entry.data;
+const {contact_form_action} = config.params;
+const {title, description, meta_title, image} = entry.data;
+const { Content } = await entry.render();
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Base
@@ -15,30 +26,112 @@ const { title, description, meta_title, image } = entry.data;
   description={description}
   image={image}
 >
-
-  <PageHeader title={title} meta_title={meta_title}/>
-  <section class="section-sm">
-    <div class="container">
-      <div class="row">
-        <div class="text-center mx-auto md:col-4 lg:col-4">
-          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
-            <h4>E-mail</h5>
-            <p class="mt-3"><a href="mailto:info@antlify.hu">info@antlify.hu</a></p>
-          </div>
-        </div>
-        <div class="text-center mx-auto md:col-4 lg:col-4">
-          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
-            <h4>Telefon</h5>
-            <p class="mt-3"><a href="tel:+36300740405">+36 30 074 04 05</a></p>
-          </div>
-        </div>
-        <div class="text-center mx-auto md:col-4 lg:col-4">
-          <div class="p-8 border-2 rounded-xl border-slate-900/10 dark:border-slate-300/10 my-2">
-            <h4>Adószám</h5>
-            <p class="mt-3">32119279-1-43</p>
-          </div>
-        </div>
+<section class="relative">
+  <div class="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="pt-12 md:pt-20">
+      <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16"><h1 class="md:text-4xl lg:text-6xl mb-6">{title}</h1>
+        <p class="text-xl text-gray-600">{description}</p>
       </div>
+      <div class="md:grid md:grid-cols-12 md:gap-6">
+        <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
+          <div class="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+            <Content />
+          </div>
+          <div class="mb-8 md:mb-0">
+            <a href="mailto:info@antlify.hu" class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 bg-white shadow-md border-gray-200 hover:shadow-lg active:bg-gray-200 active:border-transparent">
+              <div>
+                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.email.title')}</div>
+                <div class="text-gray-600 text-md">
+                  {t('contact.email.desc')}
+                </div>
+              </div>
+              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg>
+              </div>
+            </a>
+
+            <a href="tel:+36300740405" class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 bg-white shadow-md border-gray-200 hover:shadow-lg active:bg-gray-200 active:border-transparent">
+              <div>
+                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.phone.title')}</div>
+                <div class="text-gray-600">
+                  {t('contact.phone.desc')}
+                </div>
+              </div>
+              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg>
+              </div>
+            </a>
+
+            <a href={linkedin} target="_blank" class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 bg-white shadow-md border-gray-200 hover:shadow-lg active:bg-gray-200 active:border-transparent">
+              <div>
+                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.linkedin.title')}</div>
+                <div class="text-gray-600">
+                  {t('contact.linkedin.desc')}
+                </div>
+              </div>
+              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
+          <div class="transition-all" style="height: 469px;">
+            <div class="relative flex flex-col text-center lg:text-right aos-init aos-animate" data-aos="zoom-y-out">
+              <div class="w-full duration-300 absolute opacity-0 -translate-y-16" style="display: none;" hidden="">
+                <div class="relative inline-flex flex-col">
+
+
+                </div>
+              </div>
+              <div class="w-full opacity-100 translate-y-0" style="">
+                <div class="relative inline-flex flex-col"><img alt="Features bg" loading="lazy" width="500"
+                                                                height="462" decoding="async" data-nimg="1"
+                                                                class="md:max-w-none mx-auto rounded"
+                                                                style="color:transparent"
+                                                                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75 2x"
+                                                                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75"><img
+                  alt="Element" loading="lazy" width="500" height="44" decoding="async" data-nimg="1"
+                  class="md:max-w-none absolute w-full left-0 transform animate-float" style="color:transparent;top:30%"
+                  srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75 2x"
+                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75">
+                </div>
+              </div>
+              <div class="w-full opacity-0 -translate-y-16" hidden="" style="display:none">
+                <div class="relative inline-flex flex-col"><img alt="Features bg" loading="lazy" width="500"
+                                                                height="462" decoding="async" data-nimg="1"
+                                                                class="md:max-w-none mx-auto rounded"
+                                                                style="color:transparent"
+                                                                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75 2x"
+                                                                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75"><img
+                  alt="Element" loading="lazy" width="500" height="44" decoding="async" data-nimg="1"
+                  class="md:max-w-none absolute w-full left-0 transform animate-float" style="color:transparent;top:30%"
+                  srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75 2x"
+                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
     </div>
-  </section>
+  </div>
+</section>
 </Base>
