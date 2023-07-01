@@ -7,7 +7,7 @@ import { IoSearch } from "react-icons/io5/index.js";
 import LanguagePicker from '@/components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import {humanize, slugify} from "../../lib/utils/textConverter";
-import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 
 const { blog_folder } = config.settings;
 const lang = getLangFromUrl(Astro.url);

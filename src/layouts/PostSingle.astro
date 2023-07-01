@@ -16,16 +16,6 @@ import {
 import { getLangFromUrl } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 
-const textRelated = {
-  "hu":"Kapcsolódó bejegyzések",
-  "en":"Related posts",
-  "es":"Publicaciones relacionadas",
-  "de":"Ähnliche Beiträge",
-  "it":"Post correlati",
-  "fr":"Articles similaires",
-  "ro":"Postări similare"
-}
-
 const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
@@ -38,15 +28,15 @@ const { title, description, author, categories, image, date, tags, domain } = po
 
 <section class="section pt-7">
   <div class="container">
-    <ar class="row justify-center">
+    <div class="row justify-center">
       <article class="sm:col-11 md:col-9 lg:col-8">
-<div class="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-body bg-opacity-80 backdrop-blur hover:bg-white ease-in-out transition duration-300">
+<div class="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-body bg-opacity-50 dark:bg-opacity-10 backdrop-blur hover:bg-white ease-in-out transition duration-300">
   <div class="h-full w-full">
     <div class="relative w-full">
       {
         image && (
             <Image
-              class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full hover:shadow-lg ease-in-out transition duration-300"
+              class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full ease-in-out transition duration-300"
               src={image}
               alt={title}
               width={860}
@@ -56,7 +46,7 @@ const { title, description, author, categories, image, date, tags, domain } = po
       }
 
       <a href={`https://${domain}`} target="_blank"
-         class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white text-brand-500">
+         class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 text-brand-500">
         <div class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-100 p-3 shadow-sm">
 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -71,10 +61,10 @@ const { title, description, author, categories, image, date, tags, domain } = po
     </div>
     <div class="flex items-center justify-between px-1 md:items-start">
       <div class="">
-        <p class="font-bold text-navy-700 truncate max-w-[250px]">
+        <p class="font-bold text-navy-700 truncate max-w-[250px] md:max-w-[500px]">
             {title}
         </p>
-        <p class="text-sm font-medium text-gray-600">
+        <p class="text-sm font-medium text-gray-600 dark:text-slate-100">
           <a
             class=""
             href={`https://${domain}`}
@@ -86,61 +76,26 @@ const { title, description, author, categories, image, date, tags, domain } = po
       </div>
       <div class="flex flex-row-reverse md:mt-2 lg:mt-0">
 
-        <span
-          class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-theme-light text-xs text-navy-700 ">A+</span>
+        <span class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-theme-light text-xs text-navy-700 ">A+</span>
 
         {
-          tags.map((category: string, index: number) => (
-            <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white bg-slate-100 p-1">
-              <img class="h-full w-full" title={humanize(category)} src={`/icons/${slugify(category)}.svg`} alt="">
-            </span>
+          tags.map((tag: string, index: number) => (
+            <a href={`/${lang}/tags/${slugify(tag)}`} class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white bg-slate-100 p-1">
+              <img class="h-full w-full" title={humanize(tag)} src={`/icons/${slugify(tag)}.svg`} alt="">
+            </a>
           ))
         }
       </div>
     </div>
-    <div class="flex items-center justify-between md:items-center lg:justify-between ">
-      <div class="flex">
 
-      </div>
+    <div class="content mb-10 px-1">
+      <Content />
     </div>
-  </div>
-</div>
+    <div class="row items-start justify-between px-1">
+      <div class="mb-10 flex items-center lg:col-7 lg:mb-0">
 
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<section class="section pt-7">
-  <div class="container">
-    <div class="row justify-center">
-      <article class="lg:col-10">
-        {
-          image && (
-            <div class="mb-10">
-              <Image
-                src={image}
-                height={500}
-                width={1200}
-                alt={title}
-                class="w-full rounded"
-              />
-            </div>
-          )
-        }
-        <h1 set:html={markdownify(title)} class="h2 mb-4" />
         <ul class="mb-4">
-          <!--
           <li class="mr-4 inline-block">
-            <a href={`/authors/${slugify(author)}`}>
-              <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-              {humanize(author)}
-            </a>
-          </li>
-          -->
-          <li class="mr-4 inline-block">
-
             <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
             {
               categories.map((category: string, index: number) => (
@@ -156,52 +111,32 @@ const { title, description, author, categories, image, date, tags, domain } = po
             {dateFormat(date)}
           </li>
         </ul>
-        <div class="content mb-10">
-          <Content />
-          <a href={`https://${domain}`} target="_blank" class="btn btn-outline-primary lowercase">{domain}</a>
-        </div>
-        <div class="row items-start justify-between">
-          <div class="mb-10 flex items-center lg:col-7 lg:mb-0">
-            <h5 class="mr-3">Stack:</h5>
-            <ul>
-              {
-                tags.map((tag: string) => (
-                  <li class="inline-block">
-                    <a
-                      class="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark"
-                      href={`/${lang}/tags/${slugify(tag)}`}
-                    >
-                      {humanize(tag)}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-          <div class="flex items-center lg:col-4">
-            <h5 class="mr-3">Share :</h5>
-            <Share
-              className="social-icons"
-              title={title}
-              description={description}
-              slug={post.slug}
-            />
-          </div>
-        </div>
-      </article>
-    </div>
+      </div>
+      <div class="flex items-center lg:col-4">
+        <Share
+          className="social-icons"
+          title={title}
+          description={description}
+          slug={post.slug}
+        />
+      </div>
+  </div>
+</div>
 
-    <!-- Related posts -->
-    <div class="section pb-0">
-      <h2 class="h3 mb-12 text-center">{textRelated[lang]}</h2>
-      <div class="row justify-center">
-        {
-          similarPosts.slice(0, 3).map((post) => (
-            <div class="lg:col-4">
-              <BlogCard data={post} />
-            </div>
-          ))
-        }
+      </article>
+
+      <!-- Related posts -->
+      <div class="section pb-0">
+        <h2 class="h3 mb-12 text-center">További munkáink</h2>
+        <div class="row justify-center">
+          {
+            similarPosts.slice(0, 2).map((post) => (
+              <div class="lg:col-4">
+                <BlogCard data={post} />
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>

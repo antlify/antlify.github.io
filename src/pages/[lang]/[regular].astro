@@ -46,7 +46,7 @@ const { Content } = await page.render();
                 <h1 class="mb-6 md:text-3xl lg:text-4xl xl:text-5xl">
                   {title}
                 </h1>
-                <p class="max-w-xl mt-4 text-lg tracking-tight text-gray-600">
+                <p class="max-w-xl mt-4 text-lg tracking-tight dark:text-slate-100 text-slate-900">
                   {description}
                 </p>
               </div>
@@ -54,7 +54,7 @@ const { Content } = await page.render();
                 <a href={`/${lang}${navigation_button.link}`} class="btn-outline">
                   {t(navigation_button.label)}
                 </a>
-                <a href="#" class="inline-flex items-center justify-center text-sm text-black duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
+                <a href="#" class="inline-flex items-center justify-center text-sm text-slate-900 dark:text-slate-100 duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
                   Learn more
                   <span aria-hidden="true" class="ms-2"> » </span>
                 </a>

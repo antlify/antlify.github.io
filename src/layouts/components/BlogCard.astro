@@ -9,7 +9,7 @@ const {data} = Astro.props;
 const {title, image, date, author, categories, domain, tags} = data.data;
 const [langcode, ...slug] = data.slug.split('/');
 ---
-<div class="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-body bg-opacity-80 backdrop-blur hover:bg-white ease-in-out transition duration-300">
+<div class="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-body bg-opacity-50 dark:bg-opacity-10 backdrop-blur hover:bg-white ease-in-out transition duration-300">
   <div class="h-full w-full">
     <div class="relative w-full">
       {
@@ -27,8 +27,8 @@ const [langcode, ...slug] = data.slug.split('/');
       }
 
       <a href={`https://${domain}`} target="_blank"
-         class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white text-brand-500">
-        <div class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-100 p-3 shadow-sm">
+         class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 text-brand-500">
+        <div class="flex h-full w-full items-center justify-center rounded-full text-xl p-3 shadow-sm">
 
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                stroke="#160873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -42,12 +42,12 @@ const [langcode, ...slug] = data.slug.split('/');
     </div>
     <div class="flex items-center justify-between px-1 md:items-start">
       <div class="">
-        <p class=" font-bold text-navy-700 truncate max-w-[250px]">
+        <p class=" font-bold text-navy-700 truncate max-w-[250px] dark:text-slate-100">
           <a href={`/${langcode}/${blog_folder}/${slug}`}>
             {title}
           </a>
         </p>
-        <p class="text-sm font-medium text-gray-600">
+        <p class="text-sm font-medium text-slate-900 dark:text-slate-200">
           <a
             class=""
             href={`https://${domain}`}
@@ -63,10 +63,10 @@ const [langcode, ...slug] = data.slug.split('/');
           class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-theme-light text-xs text-navy-700 ">A+</span>
 
         {
-          tags.map((category: string, index: number) => (
-            <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white bg-slate-100 p-1">
-              <img class="h-full w-full" title={humanize(category)} src={`/icons/${slugify(category)}.svg`} alt="">
-            </span>
+          tags.map((tag: string, index: number) => (
+            <a href={`/${langcode}/tags/${slugify(tag)}`} class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white bg-slate-100 p-1">
+              <img class="h-full w-full" title={humanize(tag)} src={`/icons/${slugify(tag)}.svg`} alt="">
+            </a>
           ))
         }
       </div>
