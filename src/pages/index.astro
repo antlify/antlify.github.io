@@ -76,10 +76,11 @@ const { banner, features } = homepage.data;
           <div class="container">
             <div class="row items-center justify-between">
               <div
-                class={`mb:md-0 mb-6 md:col-5 ${
+                class={`mb:md-0 mb-6 md:col-5 relative ${
                   index % 2 !== 0 && "md:order-2"
                 }`}
               >
+                <div class="bg-rose-500 h-[360px] mx-12 rounded-2xl aether-zoom relative"></div>
                 <img
                   src={feature.image}
                   height={480}
@@ -87,6 +88,7 @@ const { banner, features } = homepage.data;
                   fit="contain"
                   background="rgba(0,0,0,0)"
                   alt={feature.title}
+                  class="absolute top-0 -mt-10 hover:-mt-12 duration-500"
                 />
               </div>
               <div

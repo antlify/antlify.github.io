@@ -13,7 +13,7 @@ _— Keressen elérhetőségeinken és dolgozzunk együtt!_"
 # Features
 features:
   - title: "Weboldal és webáruház fejlesztés"
-    image: "/images/service-1.png"
+    image: "/portfolio/aerisoul_mockup_nobg.png"
     content: "Több éves tapasztalattal profi és időtálló eredményt biztosítunk. Modern módszerek és alapos piaci ismeret alapján növeljük az értékesítést és ügyfélbázist."
     bulletpoints:
     - "Statikus weboldal fejlesztés alacsony fenntartási költséggel"
