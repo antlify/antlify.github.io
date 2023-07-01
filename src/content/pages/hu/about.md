@@ -1,5 +1,5 @@
 ---
-title: 'Ismerje meg az <span class="from-blue-800 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">antlify</span> csapatát!'
+title: 'Ismerje meg az <span class="from-dark via-primary to-dark dark:via-blue-200 dark:from-white dark:to-white bg-gradient-to-br bg-clip-text text-transparent whitespace-nowrap">antlify</span> csapatát!'
 meta_title: "Rólunk"
 description: ""
 image: "/images/a.svg"

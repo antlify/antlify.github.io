@@ -1,4 +1,5 @@
 ---
+import config from "../../config/config.json";
 import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
@@ -12,6 +13,7 @@ import { languages } from "../../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { navigation_button, settings } = config;
 
 export async function getStaticPaths() {
   const paramsArray = Object.keys(languages).map(lang => {
@@ -24,6 +26,7 @@ const { Content } = await entry.render();
 const { title, description, meta_title, image } = entry.data;
 ---
 
+
 <Base
   title={title}
   meta_title={meta_title}
@@ -31,18 +34,193 @@ const { title, description, meta_title, image } = entry.data;
   image={image}
 >
 
-  <section>
-    <div class="container text-center">
-      <div
-        class="bg-drupal rounded-2xl bg-gradient-to-b from-body to-theme-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-theme-light"
-      >
-        <h1 set:text={humanize(title)} />
-        <Breadcrumbs className="mt-6" meta_title={meta_title} title={title}/>
+
+<section class="">
+  <div class="relative items-center w-full px-5 pt-24 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+    <div class="row">
+      <div class="md:col-9 lg:col-8">
+        <div class="md:-ms-12 lg:-ms-16">
+        <svg role="img" viewBox="0 0 24 24" width="64" class="" xmlns="http://www.w3.org/2000/svg"><title>Drupal</title><path fill="#0678BE" d="M15.78 5.113C14.09 3.425 12.48 1.815 11.998 0c-.48 1.815-2.09 3.425-3.778 5.113-2.534 2.53-5.405 5.4-5.405 9.702a9.184 9.185 0 1018.368 0c0-4.303-2.871-7.171-5.405-9.702M6.72 16.954c-.563-.019-2.64-3.6 1.215-7.416l2.55 2.788a.218.218 0 01-.016.325c-.61.625-3.204 3.227-3.527 4.126-.066.186-.164.18-.222.177M12 21.677a3.158 3.158 0 01-3.158-3.159 3.291 3.291 0 01.787-2.087c.57-.696 2.37-2.655 2.37-2.655s1.774 1.988 2.367 2.649a3.09 3.09 0 01.792 2.093A3.158 3.158 0 0112 21.677m6.046-5.123c-.068.15-.223.398-.431.405-.371.014-.411-.177-.686-.583-.604-.892-5.864-6.39-6.848-7.455-.866-.935-.122-1.595.223-1.94C10.736 6.547 12 5.285 12 5.285s3.766 3.574 5.336 6.016c1.57 2.443 1.029 4.556.71 5.253"/></svg>
+
+          <div class="mt-16 flex items-center">
+            <a href="https://www.drupal.org/antlify" target="_blank" class="bg-[#0678BE] bg-opacity-10 hover:bg-opacity-20 text-[#0678BE] text-sm px-4 py-2 border border-[#0596f0] rounded-full">
+              Antlify Drupal
+            </a>
+            <a href="https://www.drupal.org/blog/drupal-10-1-0" target="_blank" class="inline-flex ms-4 items-center gap-2 hover:gap-3 duration-300">
+              <span>Elérhető a Drupal 10.1</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path></svg>
+            </a>
+          </div>
+          <h1 class="mb-6 md:text-4xl lg:text-5xl xl:text-6xl mt-8">
+            {title}
+          </h1>
+        </div>
+        <p class="max-w-2xl mt-4 text-lg md:me-12">
+          {description}
+        </p>
+      </div>
+      <div class="md:col-3 lg:col-4">
+        <div class="flex items-start justify-center md:-mt-6 md:-ms-48 space-x-4 lg:justify-start mt-4">
+          <Image
+            class="w-36 rounded-lg shadow-lg hover:scale-105 duration-200"
+            src={'/illustration/ag2.png'}
+            alt={t('team.maintenance')}
+            width={512}
+            height={300}
+          />
+          <Image
+            class="w-48 rounded-lg shadow-lg hover:scale-105 duration-200"
+            src={'/illustration/mac.png'}
+            alt={t('team.monitoring')}
+            width={576}
+            height={355}
+          />
+        </div>
+        <div class="flex items-start justify-center space-x-4 lg:justify-start mt-4">
+          <Image
+            class="w-32 rounded-lg shadow-lg hover:scale-105 duration-200"
+            src={'/illustration/card.png'}
+            alt={t('team.guarantee')}
+            width={384}
+            height={650}
+          />
+          <Image
+            class="w-48 rounded-lg shadow-lg hover:scale-105 duration-200"
+            src={'/illustration/en.png'}
+            alt={t('team.customerservice')}
+            width={384}
+            height={542}
+          />
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="section-sm">
-    <Content />
-  </section>
+    <div class="content mt-8">
+      <Content />
+    </div>
+
+    <div class="mt-8">
+      <h2 class="text-3xl">Mikor ideális választás a Drupal?</h2>
+      <div class="max-w-xl py-12 mx-auto text-left lg:max-w-7xl">
+        <div>
+          <div class="grid grid-cols-2 gap-12 lg:grid-cols-3 lg:space-y-0">
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Nagy forgalmú weboldalak esetén</h6>
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Define the data model in your database and query data with
+                GraphQL.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Nemzetközi weboldalak</h6>
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Sync data across multiple clients.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Define complex security policies to keep your users’ data safe.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Upload and manage files.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Resize and optimise images on the fly.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                User accounts and social login.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Custom backend code with logs and error handling.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Stripe integration for all apps.
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex items-center justify-center w-12 h-12 text-black bg-white bg-opacity-60 backdrop-blur hover:bg-opacity-70 rounded-xl">
+                  ❖
+                </div>
+                <h6 class="mt-4 text-lg">Országos és nemzetközi volumen</h6>
+
+              </div>
+              <div class="mt-4 text-base text-gray-500">
+                Design your email templates and engage your users.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="btn btn-outline my-3 -ms-1" href={`/${lang}${navigation_button.link}`}>
+      {t(navigation_button.label)}
+    </a>
+  </div>
+</section>
+
+
 </Base>

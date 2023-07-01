@@ -87,16 +87,16 @@ const { pathname } = Astro.url;
                   </svg>
                 </span>
                 <ul class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
-                  <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 rounded-xl overflow-hidden">
-                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                      <div class="grid grid-cols-1 gap-8">
+                  <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-6 rounded-xl overflow-hidden">
+                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                      <div class="grid grid-cols-1 gap-2">
 
                         {menu.children?.map((child) => (
-                          <a href={`/${lang}${child.url}`} class="inline-flex items-start px-3 py-2 -m-3 transition duration-150 ease-in-out rounded-xl hover:bg-gray-50">
+                          <a href={`/${lang}${child.url}`} class="inline-flex items-start px-3 py-2 transition duration-150 ease-in-out rounded-xl hover:bg-gray-50">
                             <div class={`${child.url}`}>
                               <img class="h-full w-full mt-2" src={`/menu${child.url}.svg`} alt="">
                             </div>
-                            <div class="ml-4">
+                            <div class="ml-3">
                               <p class="text-base font-medium text-black">
                                 {t(child.name)}
                               </p>
@@ -109,7 +109,7 @@ const { pathname } = Astro.url;
                       </div>
                       <div class="grid grid-cols-1 gap-3 p-2 lg:p-0 bg-gray-50 rounded-2xl">
                         <div class="grid items-start h-full gap-2 px-5 py-6 sm:gap-3 sm:p-8">
-                          <h3 class="text-base font-medium text-blue-400">
+                          <h3 class="text-base font-medium text-blue-400 dark:text-slate-900">
                             Referenciáink
                           </h3>
                           <ul class="space-y-2 -ms-2">
@@ -141,12 +141,12 @@ const { pathname } = Astro.url;
                             <a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
                               Video Tutorials
                             </a>
-                            <!--<a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
-                            <!--  Libraries and SDKs-->
-                            <!--</a>-->
-                            <!--<a href="#" class="inline-flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
-                            <!--  Adding Plugins-->
-                            <!--</a>-->
+                            <a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
+                              Libraries and SDKs
+                            </a>
+                            <a href="#" class="inline-flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
+                              Adding Plugins
+                            </a>
                             <!--<a href="#" class="inline-flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
                             <!--  Dashboard templates-->
                             <!--</a>-->
