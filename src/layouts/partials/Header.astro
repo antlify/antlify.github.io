@@ -6,9 +6,13 @@ import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5/index.js";
 import LanguagePicker from '@/components/LanguagePicker.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import {humanize, slugify} from "../../lib/utils/textConverter";
+import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 
+const { blog_folder } = config.settings;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const categories = await getTaxonomy(blog_folder, "categories", lang);
 
 export interface ChildNavigationLink {
   name: string;
@@ -83,21 +87,74 @@ const { pathname } = Astro.url;
                   </svg>
                 </span>
                 <ul class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
-                  {menu.children?.map((child) => (
-                    <li class="nav-dropdown-item">
-                      <a
-                        rel="prefetch"
-                        href={`/${lang}${child.url}`}
-                        class={`nav-dropdown-link block ${
-                          (pathname === `${child.url}/` ||
-                            pathname === child.url) &&
-                          "active"
-                        }`}
-                      >
-                        {t(child.name)}
-                      </a>
-                    </li>
-                  ))}
+                  <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 rounded-xl overflow-hidden">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                      <div class="grid grid-cols-1 gap-8">
+
+                        {menu.children?.map((child) => (
+                          <a href={`/${lang}${child.url}`} class="inline-flex items-start px-3 py-2 -m-3 transition duration-150 ease-in-out rounded-xl hover:bg-gray-50">
+                            <div class={`${child.url}`}>
+                              <img class="h-full w-full mt-2" src={`/menu${child.url}.svg`} alt="">
+                            </div>
+                            <div class="ml-4">
+                              <p class="text-base font-medium text-black">
+                                {t(child.name)}
+                              </p>
+                              <p class="mt-1 text-sm text-gray-500">
+                                Trending designs to inspire you
+                              </p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                      <div class="grid grid-cols-1 gap-3 p-2 lg:p-0 bg-gray-50 rounded-2xl">
+                        <div class="grid items-start h-full gap-2 px-5 py-6 sm:gap-3 sm:p-8">
+                          <h3 class="text-base font-medium text-blue-400">
+                            Referenciáink
+                          </h3>
+                          <ul class="space-y-2 -ms-2">
+                            {
+                              categories.map((tag: any) => {
+                                return (
+                                  <li class="inline-block">
+                                    <a
+                                      class="mx-1 block rounded bg-white text-sm px-2 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-dark"
+                                      href={`/${lang}/categories/${tag}`}
+                                    >
+                                      {humanize(tag)}
+                                    </a>
+                                  </li>
+                                );
+                              })
+                            }
+                          </ul>
+                          <div class="space-y-1">
+                            <!--<a href="#" class="flex items-start text-sm font-medium transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
+                            <!--  Explore design work-->
+                            <!--</a>-->
+                            <a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
+                              Register
+                            </a>
+                            <a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
+                              Adding users
+                            </a>
+                            <a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">
+                              Video Tutorials
+                            </a>
+                            <!--<a href="#" class="flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
+                            <!--  Libraries and SDKs-->
+                            <!--</a>-->
+                            <!--<a href="#" class="inline-flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
+                            <!--  Adding Plugins-->
+                            <!--</a>-->
+                            <!--<a href="#" class="inline-flex items-start text-sm text-gray-500 transition duration-150 ease-in-out rounded-lg hover:text-blue-500">-->
+                            <!--  Dashboard templates-->
+                            <!--</a>-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </ul>
               </li>
             ) : (

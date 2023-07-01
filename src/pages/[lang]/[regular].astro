@@ -1,7 +1,12 @@
 ---
+import config from "../../config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { Image } from "@astrojs/image/components";
+
+const { navigation_button, settings } = config;
 
 import { getCollection } from 'astro:content';
 
@@ -17,6 +22,7 @@ export async function getStaticPaths() {
 }
 
 const { lang, regular } = Astro.params;
+const t = useTranslations(lang);
 const page = Astro.props;
 const { title, meta_title, description, image } = page.data;
 const { Content } = await page.render();
@@ -28,14 +34,41 @@ const { Content } = await page.render();
   description={description}
   image={image}
 >
-  <PageHeader title={title} meta_title={meta_title}/>
-  <section class="section-sm pt-5">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="md:col-10 lg:col-7">
+
+
+  <section class="overflow-y-auto  lg:h-screen section-sm">
+    <div class="container mx-auto lg:px-16 lg:flex">
+      <div class="lg:w-1/2">
+        <div class="top-0 pt-8 pb-16 lg:sticky">
+          <div>
+            <div class="lg:pr-24 md:pr-12">
+              <div>
+                <h1 class="mb-6 md:text-3xl lg:text-4xl xl:text-5xl">
+                  {title}
+                </h1>
+                <p class="max-w-xl mt-4 text-lg tracking-tight text-gray-600">
+                  {description}
+                </p>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
+                <a href={`/${lang}${navigation_button.link}`} class="btn-outline">
+                  {t(navigation_button.label)}
+                </a>
+                <a href="#" class="inline-flex items-center justify-center text-sm text-black duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
+                  Learn more
+                  <span aria-hidden="true" class="ms-2"> » </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2">
+        <div class="flex-shrink-0">
           <div class="content">
             <Content />
           </div>
+
         </div>
       </div>
     </div>

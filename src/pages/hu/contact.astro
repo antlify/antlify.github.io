@@ -27,15 +27,15 @@ const t = useTranslations(lang);
   image={image}
 >
 <section class="relative">
-  <div class="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
+  <!--<div class="absolute inset-0 bg-white dark:bg-darkmode-theme-light pointer-events-none mb-16" aria-hidden="true"></div>-->
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
     <div class="pt-12 md:pt-20">
-      <div class="max-w-3xl mx-auto text-center pb-12 md:pb-16"><h1 class="md:text-4xl lg:text-6xl mb-6">{title}</h1>
-        <p class="text-xl text-gray-600">{description}</p>
+      <div class="md:col-6 pb-12 md:pb-16"><h1 class="md:text-4xl lg:text-6xl mb-6">{title}</h1>
+        <p class="text-xl text-slate-900 dark:text-slate-100">{description}</p>
       </div>
       <div class="md:grid md:grid-cols-12 md:gap-6">
         <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
-          <div class="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+          <div class="md:pr-4 lg:pr-12 xl:pr-16 mb-8 text-slate-800 dark:text-slate-200">
             <Content />
           </div>
           <div class="mb-8 md:mb-0">
@@ -85,38 +85,33 @@ const t = useTranslations(lang);
 
 
         <div class="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
-          <div class="transition-all" style="height: 469px;">
-            <div class="relative flex flex-col text-center lg:text-right aos-init aos-animate" data-aos="zoom-y-out">
-              <div class="w-full duration-300 absolute opacity-0 -translate-y-16" style="display: none;" hidden="">
-                <div class="relative inline-flex flex-col">
-
-
+          <div class="absolute transform lg:-translate-y-1/2 lg:left-1/2 lg:top-1/2 lg:translate-x-8 sm:left-1/2 sm:top-0 sm:translate-x-8">
+            <div class="flex items-center space-x-6 lg:space-x-8">
+              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div class="h-full overflow-hidden w-44 lg:opacity-100 sm:opacity-0">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
+                </div>
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
                 </div>
               </div>
-              <div class="w-full opacity-100 translate-y-0" style="">
-                <div class="relative inline-flex flex-col"><img alt="Features bg" loading="lazy" width="500"
-                                                                height="462" decoding="async" data-nimg="1"
-                                                                class="md:max-w-none mx-auto rounded"
-                                                                style="color:transparent"
-                                                                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75 2x"
-                                                                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75"><img
-                  alt="Element" loading="lazy" width="500" height="44" decoding="async" data-nimg="1"
-                  class="md:max-w-none absolute w-full left-0 transform animate-float" style="color:transparent;top:30%"
-                  srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75 2x"
-                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75">
+              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8 mt-4">
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
+                </div>
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
+                </div>
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
                 </div>
               </div>
-              <div class="w-full opacity-0 -translate-y-16" hidden="" style="display:none">
-                <div class="relative inline-flex flex-col"><img alt="Features bg" loading="lazy" width="500"
-                                                                height="462" decoding="async" data-nimg="1"
-                                                                class="md:max-w-none mx-auto rounded"
-                                                                style="color:transparent"
-                                                                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75 2x"
-                                                                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-bg.35306e3e.png&amp;w=1080&amp;q=75"><img
-                  alt="Element" loading="lazy" width="500" height="44" decoding="async" data-nimg="1"
-                  class="md:max-w-none absolute w-full left-0 transform animate-float" style="color:transparent;top:30%"
-                  srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75 2x"
-                  src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeatures-element.1a5bcb68.png&amp;w=1080&amp;q=75">
+              <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
+                </div>
+                <div class="h-full overflow-hidden w-44">
+                  <img alt="Lexingtøn thumbnail" class="object-cover" src="https://d33wubrfki0l68.cloudfront.net/64c901dbc4b16388ef27646a320ad9c1441594df/236fd/images/placeholders/rectangle2.svg" decoding="async" height="926" loading="lazy" width="428">
                 </div>
               </div>
             </div>
@@ -134,4 +129,62 @@ const t = useTranslations(lang);
     </div>
   </div>
 </section>
+
+<section class="py-10 sm:py-16 lg:py-24">
+  <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Questions & Answers</h2>
+      <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-800 dark:text-white">Explore the common questions and answers about Celebration</p>
+    </div>
+
+    <div class="grid grid-cols-1 mt-12 md:mt-20 md:grid-cols-2 gap-y-16 gap-x-20">
+      <div class="flex items-start">
+        <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+          <span class="text-lg font-semibold text-white">?</span>
+        </div>
+        <div class="ml-4">
+          <p class="text-xl font-semibold">How to create an account?</p>
+          <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+          <span class="text-lg font-semibold text-white">?</span>
+        </div>
+        <div class="ml-4">
+          <p class="text-xl font-semibold">How can I make payment?</p>
+          <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+          <span class="text-lg font-semibold text-white">?</span>
+        </div>
+        <div class="ml-4">
+          <p class="text-xl font-semibold">Do you provide discounts?</p>
+          <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start">
+        <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-700 rounded-full">
+          <span class="text-lg font-semibold text-white">?</span>
+        </div>
+        <div class="ml-4">
+          <p class="text-xl font-semibold">How do you provide support?</p>
+          <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center mt-12 md:mt-20">
+      <div class="px-8 py-4 text-center bg-gray-800 rounded-full">
+        <p class="text-gray-50">Didn’t find the answer you are looking for? <a href="#" title="" class="text-yellow-300 transition-all duration-200 hover:text-yellow-400 focus:text-yellow-400 hover:underline">Contact our support</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </Base>

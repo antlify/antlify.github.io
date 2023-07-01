@@ -1,15 +1,84 @@
 ---
-import { Image } from "@astrojs/image/components";
+import {Image} from "@astrojs/image/components";
 import config from "@/config/config.json";
-import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
-import { FaRegFolder, FaRegUserCircle } from "react-icons/fa/index.js";
+import {humanize, plainify, slugify} from "@/lib/utils/textConverter";
+import {FaRegFolder, FaRegUserCircle} from "react-icons/fa/index.js";
 
-const { summary_length, blog_folder } = config.settings;
-const { data } = Astro.props;
-const { title, image, date, author, categories, domain } = data.data;
+const {summary_length, blog_folder} = config.settings;
+const {data} = Astro.props;
+const {title, image, date, author, categories, domain, tags} = data.data;
 const [langcode, ...slug] = data.slug.split('/');
 ---
+<div class="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 w-full !p-4 3xl:p-![18px] bg-body bg-opacity-80 backdrop-blur hover:bg-white ease-in-out transition duration-300">
+  <div class="h-full w-full">
+    <div class="relative w-full">
+      {
+        image && (
+          <a href={`/${langcode}/${blog_folder}/${slug}`}>
+            <Image
+              class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full hover:shadow-lg ease-in-out transition duration-300"
+              src={image}
+              alt={title}
+              width={300}
+              height={200}
+            />
+          </a>
+        )
+      }
 
+      <a href={`https://${domain}`} target="_blank"
+         class="absolute top-3 right-3 flex items-center justify-center rounded-full bg-white text-brand-500">
+        <div class="flex h-full w-full items-center justify-center rounded-full text-xl hover:bg-gray-100 p-3 shadow-sm">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="#160873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="flex items-center justify-between px-1 md:items-start">
+      <div class="">
+        <p class=" font-bold text-navy-700 truncate max-w-[250px]">
+          <a href={`/${langcode}/${blog_folder}/${slug}`}>
+            {title}
+          </a>
+        </p>
+        <p class="text-sm font-medium text-gray-600">
+          <a
+            class=""
+            href={`https://${domain}`}
+            target="_blank"
+          >
+            {domain}
+          </a>
+        </p>
+      </div>
+      <div class="flex flex-row-reverse md:mt-2 lg:mt-0">
+
+        <span
+          class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-theme-light text-xs text-navy-700 ">A+</span>
+
+        {
+          tags.map((category: string, index: number) => (
+            <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white bg-slate-100 p-1">
+              <img class="h-full w-full" title={humanize(category)} src={`/icons/${slugify(category)}.svg`} alt="">
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex items-center justify-between md:items-center lg:justify-between ">
+      <div class="flex">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--
 <div class="bg-body dark:bg-darkmode-body mb-12">
   {
     image && (
@@ -25,18 +94,6 @@ const [langcode, ...slug] = data.slug.split('/');
     )
   }
 
- <ul class="mb-4">
-     <li class="mr-4 inline-block">
-       {
-         categories.map((category: string, index: number) => (
-           <a rel="prefetch" href={`/${langcode}/categories/${slugify(category)}`}>
-             {humanize(category)}
-             {index !== categories.length - 1 && ","}
-           </a>
-         ))
-       }
-     </li>
-   </ul>
   <h4 class="mb-3">
     <a href={`/${langcode}/${blog_folder}/${slug}`}>
       {title}
@@ -52,3 +109,4 @@ const [langcode, ...slug] = data.slug.split('/');
     {domain}
   </a>
 </div>
+-->

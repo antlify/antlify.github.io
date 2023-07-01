@@ -47,17 +47,16 @@ export async function getStaticPaths() {
   image=""
   description=""
 >
-  <PageHeader title={t('posts.title')} meta_title={t('posts.title')}/>
   <section class="section">
     <div class="container">
-      <div class="row gx-5">
+      <div class="row gx-5 justify-center">
         <!-- blog -->
-        <div class="lg:col-8">
+        <div class="lg:col-11">
           <div class="row">
             {
               currentPosts.map((post) => {
                 return(
-                  <div class="mb-14 md:col-6">
+                  <div class="mb-14 md:col-6 lg:col-4">
                     <BlogCard data={post} />
                   </div>
                 )
@@ -71,12 +70,6 @@ export async function getStaticPaths() {
           />
         </div>
 
-        <!-- sidebar -->
-        <PostSidebar
-          categories={categories}
-          tags={tags}
-          allCategories={allCategories}
-        />
       </div>
     </div>
   </section>

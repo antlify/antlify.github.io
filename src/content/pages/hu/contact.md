@@ -8,9 +8,7 @@ draft: false
 
 <h4 class="mb-3">Antlify Consulting Kft.,</h3>
 
-<p class="text-lg text-gray-600">
 Adószám: 32119279-1-43 
-</p>
 
 EU Adószám: HU32119279
 

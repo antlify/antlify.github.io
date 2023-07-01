@@ -2,12 +2,12 @@
 import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
-import { plainify } from "@/lib/utils/textConverter";
+import {plainify} from "@/lib/utils/textConverter";
 import Footer from "@/partials/Footer.astro";
 import Header from "@/partials/Header.astro";
 import "@/styles/main.scss";
-import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
-import { getLangFromUrl } from '../i18n/utils';
+import {GoogleFontsOptimizer} from "astro-google-fonts-optimizer";
+import {getLangFromUrl} from '../i18n/utils';
 
 function removeTrailingSlash(str: string) {
   return str.replace(/\/+$/, '');
@@ -33,148 +33,164 @@ export interface Props {
 }
 
 // distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical } =
+const {title, meta_title, description, image, noindex, canonical} =
   Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
-  <head>
-    <!-- favicon -->
-    <link rel="shortcut icon" href={config.site.favicon} />
-    <!-- theme meta -->
-    <meta name="theme-name" content="astroplate" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#fff"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#000"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+  <!-- favicon -->
+  <link rel="shortcut icon" href={config.site.favicon}/>
+  <!-- theme meta -->
+  <meta name="theme-name" content="astroplate"/>
+  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: light)"
+    content="#fff"
+  />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: dark)"
+    content="#000"
+  />
+  <meta name="generator" content={Astro.generator}/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <!-- google font css -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- google font css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-    <GoogleFontsOptimizer url={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}></GoogleFontsOptimizer>
+  <GoogleFontsOptimizer
+    url={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`}></GoogleFontsOptimizer>
 
-    <!-- responsive meta -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=5"
-    />
+  <!-- responsive meta -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=5"
+  />
 
-    <!-- title -->
-    <title>
-      {plainify(meta_title ? meta_title : title ? title : config.site.title)}
-    </title>
+  <!-- title -->
+  <title>
+    {plainify(meta_title ? meta_title : title ? title : config.site.title)}
+  </title>
 
-    <!-- canonical url -->
-    <link rel="canonical" href={canonicalUrl} />
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+  <!-- canonical url -->
+  <link rel="canonical" href={canonicalUrl}/>
+  {canonical &&
+    <link rel="canonical" href={canonical} item-prop="url"/>}
 
-    <!-- noindex robots -->
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+  <!-- noindex robots -->
+  {noindex &&
+    <meta name="robots" content="noindex,nofollow"/>}
 
-    <!-- meta-description -->
-    <meta
-      name="description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
-    />
+  <!-- meta-description -->
+  <meta
+    name="description"
+    content={plainify(
+      description ? description : config.metadata.meta_description
+    )}
+  />
 
-    <!-- author from config.json -->
-    <meta name="author" content={config.metadata.meta_author} />
+  <!-- author from config.json -->
+  <meta name="author" content={config.metadata.meta_author}/>
 
-    <!-- og-title -->
-    <meta
-      property="og:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
-      )}
-    />
+  <!-- og-title -->
+  <meta
+    property="og:title"
+    content={plainify(
+      meta_title ? meta_title : title ? title : config.site.title
+    )}
+  />
 
-    <!-- og-description -->
-    <meta
-      property="og:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
-    />
+  <!-- og-description -->
+  <meta
+    property="og:description"
+    content={plainify(
+      description ? description : config.metadata.meta_description
+    )}
+  />
+  <meta property="og:type" content="website"/>
+  <meta
+    property="og:url"
+    content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
+  />
 
-    <!-- twitter-title -->
-    <meta
-      name="twitter:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
-      )}
-    />
+  <!-- twitter-title -->
+  <meta
+    name="twitter:title"
+    content={plainify(
+      meta_title ? meta_title : title ? title : config.site.title
+    )}
+  />
 
-    <!-- twitter-description -->
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description
-      )}
-    />
+  <!-- twitter-description -->
+  <meta
+    name="twitter:description"
+    content={plainify(
+      description ? description : config.metadata.meta_description
+    )}
+  />
 
-    <!-- og-image -->
-    <meta
-      property="og:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
-    />
+  <!-- og-image -->
+  <meta
+    property="og:image"
+    content={`${config.site.base_url}${
+      image ? image : config.metadata.meta_image
+    }`}
+  />
 
-    <!-- twitter-image -->
-    <meta
-      name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- twitter-image -->
+  <meta
+    name="twitter:image"
+    content={`${config.site.base_url}${
+      image ? image : config.metadata.meta_image
+    }`}
+  />
+  <meta name="twitter:card" content="summary_large_image"/>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNQSL3M9J3"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNQSL3M9J3"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'G-ZNQSL3M9J3');
-    </script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-    <!-- Hotjar Tracking Code for https://antlify.hu/ -->
-    <script is:inline>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3537915,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-  </head>
-  <body>
-    <TwSizeIndicator />
-    <Header />
-    <main id="main-content">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZNQSL3M9J3');
+  </script>
+
+  <!-- Hotjar Tracking Code for https://antlify.hu/ -->
+  <script is:inline>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {hjid: 3537915, hjsv: 6};
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-100 via-blue-50 to-white dark:from-slate-900">
+<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+  <div
+    class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);"></div>
+</div>
+
+<TwSizeIndicator/>
+<Header/>
+<main id="main-content">
+  <slot/>
+</main>
+<Footer/>
+</body>
 </html>
