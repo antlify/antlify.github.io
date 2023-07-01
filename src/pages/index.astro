@@ -80,15 +80,14 @@ const { banner, features } = homepage.data;
                   index % 2 !== 0 && "md:order-2"
                 }`}
               >
-                <div class="bg-rose-500 h-[360px] mx-12 rounded-2xl aether-zoom relative"></div>
+                <div class="bg-rose-500 h-[220px] md:h-[360px] mx-8 rounded-2xl aether-zoom relative"></div>
                 <img
                   src={feature.image}
                   height={480}
                   width={520}
                   fit="contain"
-                  background="rgba(0,0,0,0)"
                   alt={feature.title}
-                  class="absolute top-0 -mt-10 hover:-mt-12 duration-500"
+                  class="absolute top-0.5 left-0 -mt-10 hover:-mt-12 duration-500 max-w-full px-2"
                 />
               </div>
               <div
