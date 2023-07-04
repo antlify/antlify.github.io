@@ -7,36 +7,60 @@ import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
+const { navigation_button, settings } = config;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 ---
 
-<footer class="bg-theme-light border-t dark:bg-darkmode-theme-light">
-  <div class="container">
-    <div class="row items-center py-10">
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
-        <Logo />
+<footer class="border-t border-gray-200">
+  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16 xl:px-20">
+    <div class="flex flex-col items-start justify-between pt-16 pb-6 gap-y-12 lg:flex-row lg:items-center lg:py-16">
+      <div>
+        <div class="flex items-center text-black">
+          <div>
+            <Logo />
+            <p class="text w-2/3 my-8 text-slate-600 dark:text-slate-200">
+              Antlify Consulting Kft. megbízható és eredményorientált webfejlesztési szolgáltatásokat nyújt,
+              amelyek hozzájárulnak az ügyfelek üzleti növekedéséhez és eladásainak növeléséhez.
+            </p>
+          </div>
+        </div>
+        <nav class="flex gap-8 mt-4">
+          <ul>
+            {
+              menu.footer.map((menu) => (
+                <a href={`/${lang}${menu.url}`} class="relative -my-2 rounded-lg pe-2 py-1 text-sm text-slate-500 dark:text-slate-200 hover:text-blue-600 transition-colors delay-150 hover:delay-[0ms]">
+                  <span class="relative z-10">{t(menu.name)}</span>
+                </a>
+              ))
+            }
+          </ul>
+        </nav>
       </div>
-      <div class="mb-8 text-center lg:col-6 lg:mb-0">
-        <ul>
-          {
-            menu.footer.map((menu) => (
-              <li class="m-3 inline-block">
-                <a href={`/${lang}${menu.url}`}>{t(menu.name)}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
-        <Social source={social} className="social-icons" />
+      <div class="relative flex items-center self-stretch p-3 -mx-4 transition-colors group hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
+        <div class="relative flex items-center justify-center flex-none w-24 h-24 bg-primary rounded-xl text-slate-100">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </div>
+        <div class="ml-8 lg:w-64">
+          <p class="text-base font-semibold">
+            <a href={`/${lang}${navigation_button.link}`}>
+              <span class="absolute inset-0 sm:rounded-2xl"></span>Keressen elérhetőségeinken!
+            </a>
+          </p>
+          <p class="mt-1 text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600">
+            Follow us for social media for news and updates
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="border-t border-border py-7 dark:border-darkmode-border">
-    <div class="container text-center text-light dark:text-darkmode-light prose-sm">
-      <p set:html={markdownify(config.params.copyright)} />
+    <div class="flex flex-col items-center pt-8 pb-12 border-t border-gray-200 md:flex-row-reverse md:justify-between md:pt-6">
+      <div class="max-w-xl">
+        <Social source={social} className="social-icons" />
+      </div>
+      <p set:html={markdownify(config.params.copyright)} class="mt-6 text-sm text-gray-500 md:mt-0" />
     </div>
   </div>
 </footer>
