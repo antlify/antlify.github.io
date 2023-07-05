@@ -35,13 +35,30 @@ const { title, description, meta_title, image } = entry.data;
 >
 
 
-<section class="">
+<section class="relative">
   <div class="relative items-center w-full px-5 pt-24 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
     <div class="row">
       <div class="md:col-9 lg:col-8">
         <div class="md:-ms-12 lg:-ms-16">
         <svg role="img" viewBox="0 0 24 24" width="64" class="" xmlns="http://www.w3.org/2000/svg"><title>Drupal</title><path fill="#0678BE" d="M15.78 5.113C14.09 3.425 12.48 1.815 11.998 0c-.48 1.815-2.09 3.425-3.778 5.113-2.534 2.53-5.405 5.4-5.405 9.702a9.184 9.185 0 1018.368 0c0-4.303-2.871-7.171-5.405-9.702M6.72 16.954c-.563-.019-2.64-3.6 1.215-7.416l2.55 2.788a.218.218 0 01-.016.325c-.61.625-3.204 3.227-3.527 4.126-.066.186-.164.18-.222.177M12 21.677a3.158 3.158 0 01-3.158-3.159 3.291 3.291 0 01.787-2.087c.57-.696 2.37-2.655 2.37-2.655s1.774 1.988 2.367 2.649a3.09 3.09 0 01.792 2.093A3.158 3.158 0 0112 21.677m6.046-5.123c-.068.15-.223.398-.431.405-.371.014-.411-.177-.686-.583-.604-.892-5.864-6.39-6.848-7.455-.866-.935-.122-1.595.223-1.94C10.736 6.547 12 5.285 12 5.285s3.766 3.574 5.336 6.016c1.57 2.443 1.029 4.556.71 5.253"/></svg>
-
+          <div class="relative -z-10">
+            <div
+              class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 translate-x-1/3 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
+              <svg class="h-[55rem] w-[100rem] flex-none stroke-blue-600 opacity-20" aria-hidden="true">
+                <defs>
+                  <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
+                           patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
+                    <path d="M.5 200V.5H200" fill="none"></path>
+                  </pattern>
+                </defs>
+                <svg x="50%" y="50%" class="overflow-visible fill-blue-50">
+                  <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" stroke-width="0"></path>
+                </svg>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
+                </rect>
+              </svg>
+            </div>
+          </div>
           <div class="mt-16 flex items-center">
             <a href="https://www.drupal.org/antlify" target="_blank" class="bg-[#0678BE] bg-opacity-10 hover:bg-opacity-20 text-[#0678BE] text-sm px-4 py-2 border border-[#0596f0] rounded-full">
               Drupal.org/antlify
