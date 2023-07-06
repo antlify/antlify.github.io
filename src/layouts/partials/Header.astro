@@ -92,11 +92,11 @@ const { pathname } = Astro.url;
                       <div class="grid grid-cols-1 gap-2">
 
                         {menu.children?.map((child) => (
-                          <a href={`/${lang}${child.url}`} class="inline-flex items-start px-3 py-2 transition duration-150 ease-in-out rounded-xl hover:bg-gray-50">
+                          <a href={`/${lang}${child.url}`} class="inline-flex items-start px-3 sm:py-2 transition duration-150 ease-in-out rounded-xl hover:bg-gray-50">
                             <div class={`${child.url}`}>
                               <img class="h-full w-full mt-2" src={`/menu${child.url}.svg`} alt="">
                             </div>
-                            <div class="ml-3">
+                            <div class="ml-3 text-left">
                               <p class="text-base font-medium text-black">
                                 {t(child.name)}
                               </p>

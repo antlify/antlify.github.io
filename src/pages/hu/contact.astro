@@ -60,42 +60,42 @@ const t = useTranslations(lang);
             <Content />
           </div>
           <div class="mb-8 md:mb-0">
-            <a href="mailto:info@antlify.hu" class="flex items-center text-lg p-5 rounded transition duration-300 ease-in-out mb-3 bg-white hover:shadow active:bg-gray-200 active:border-transparent">
+            <a href="mailto:info@antlify.hu" class="flex items-center text-lg p-5 rounded panel-button mb-3">
               <div>
-                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.email.title')}</div>
-                <div class="text-gray-600 text-md">
+                <div class="font-bold leading-snug tracking-tight mb-1 text-slate-500 dark:text-slate-200 text-sm">{t('contact.email.title')}</div>
+                <div class="text-slate-600 dark:text-slate-300 text-sm">
                   {t('contact.email.desc')}
                 </div>
               </div>
-              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+              <div class="flex justify-center items-center w-8 h-8 bg-slate-50 dark:bg-slate-200 text-slate-900 rounded-full shadow flex-shrink-0 ml-3">
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
                 </svg>
               </div>
             </a>
 
-            <a href="tel:+36300740405" class="flex items-center text-lg p-5 rounded transition duration-300 ease-in-out mb-3 bg-white hover:shadow active:bg-gray-200 active:border-transparent">
+            <a href="tel:+36300740405" class="flex items-center text-lg p-5 rounded panel-button mb-3">
               <div>
-                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.phone.title')}</div>
-                <div class="text-gray-600">
+                <div class="font-bold leading-snug tracking-tight mb-1 text-slate-500 dark:text-slate-200 text-sm md:text-md">{t('contact.phone.title')}</div>
+                <div class="text-slate-600 dark:text-slate-300 text-sm">
                   {t('contact.phone.desc')}
                 </div>
               </div>
-              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+              <div class="flex justify-center items-center w-8 h-8 bg-slate-50 dark:bg-slate-200 text-slate-900 rounded-full shadow flex-shrink-0 ml-3">
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                 </svg>
               </div>
             </a>
 
-            <a href={linkedin} target="_blank" class="flex items-center text-lg p-5 rounded transition duration-300 ease-in-out mb-3 bg-white hover:shadow active:bg-gray-200 active:border-transparent">
+            <a href={linkedin} target="_blank" class="flex items-center text-lg p-5 rounded panel-button">
               <div>
-                <div class="font-bold leading-snug tracking-tight mb-1">{t('contact.linkedin.title')}</div>
-                <div class="text-gray-600">
+                <div class="font-bold leading-snug tracking-tight mb-1 text-slate-500 dark:text-slate-200 text-sm md:text-md">{t('contact.linkedin.title')}</div>
+                <div class="text-slate-600 dark:text-slate-300 text-sm">
                   {t('contact.linkedin.desc')}
                 </div>
               </div>
-              <div class="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3 border">
+              <div class="flex justify-center items-center w-8 h-8 bg-slate-50 dark:bg-slate-200 text-slate-900 rounded-full shadow flex-shrink-0 ml-3">
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                 </svg>
@@ -164,7 +164,7 @@ const t = useTranslations(lang);
           <span class="text-lg font-semibold text-white">?</span>
         </div>
         <div class="ml-4">
-          <p class="text-xl font-semibold">How to create an account?</p>
+          <p class="text-xl font-semibold text-slate-900 dark:text-slate-100">How to create an account?</p>
           <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
       </div>
@@ -174,7 +174,7 @@ const t = useTranslations(lang);
           <span class="text-lg font-semibold text-white">?</span>
         </div>
         <div class="ml-4">
-          <p class="text-xl font-semibold">How can I make payment?</p>
+          <p class="text-xl font-semibold text-slate-900 dark:text-slate-100">How can I make payment?</p>
           <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
       </div>
@@ -184,7 +184,7 @@ const t = useTranslations(lang);
           <span class="text-lg font-semibold text-white">?</span>
         </div>
         <div class="ml-4">
-          <p class="text-xl font-semibold">Do you provide discounts?</p>
+          <p class="text-xl font-semibold text-slate-900 dark:text-slate-100">Do you provide discounts?</p>
           <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
       </div>
@@ -194,7 +194,7 @@ const t = useTranslations(lang);
           <span class="text-lg font-semibold text-white">?</span>
         </div>
         <div class="ml-4">
-          <p class="text-xl font-semibold">How do you provide support?</p>
+          <p class="text-xl font-semibold text-slate-900 dark:text-slate-100">How do you provide support?</p>
           <p class="mt-4 text-base text-gray-900 dark:text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
         </div>
       </div>

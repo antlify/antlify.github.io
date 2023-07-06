@@ -172,3 +172,9 @@
   @apply prose-tr:border-border prose-tr:dark:border-darkmode-border;
   @apply prose-td:py-[18px] prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:dark:text-darkmode-text;
 }
+
+.panel-button {
+  @apply bg-slate-50 hover:bg-slate-200 active:bg-slate-300;
+  @apply dark:bg-slate-700 dark:hover:bg-slate-600 dark:active:bg-slate-500;
+  @apply transition duration-300 ease-in-out hover:shadow;
+}
