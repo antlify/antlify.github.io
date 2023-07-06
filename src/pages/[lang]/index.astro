@@ -30,8 +30,7 @@ const { banner, features } = homepage.data;
 
 <Base>
 
-<section
-  class="relative overflow-hidden bg-gradient-to-b from-blue-50 dark:from-primary via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
+<section class="relative overflow-hidden bg-gradient-to-b from-blue-50 dark:from-primary via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-28 lg:pb-24 xl:pb-32 xl:pt-30">
   <div class="relative z-10">
     <div
       class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
@@ -67,8 +66,25 @@ const { banner, features } = homepage.data;
       </div>
     </div>
   </div>
-  <div class="container mt-24 z-10">
+  <div class="container my-16 z-10">
     <Stack />
+  </div>
+
+
+  <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+    <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+      Check out the latest updates on our
+      <a href="https://www.linkedin.com/company/antlify/" target="_blank" class="font-semibold text-primary">
+        <span class="absolute inset-0" aria-hidden="true"></span>LinkedIn profile
+        <span aria-hidden="true" class="inline-block ms-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#160873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+        </span>
+      </a>
+    </div>
   </div>
 </section>
 
