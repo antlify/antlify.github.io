@@ -3,9 +3,14 @@ enable: true
 
 # Contributions
 contributions:
+- url: "https://www.drupal.org/project/boutique"
+  name: "Boutique"
+  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Boutique.png"
+  content: "The Cache UI module aims to provide the missing UI for cache bins and entries."
+  
 - url: "https://www.drupal.org/project/cache_ui"
   name: "Cache UI"
-  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Ke%CC%81pernyo%CC%8Bfoto%CC%81%202023-07-06%20-%200.26.47.png?itok=G3AZ_lwt"
+  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Ke%CC%81pernyo%CC%8Bfoto%CC%81%202023-07-06%20-%200.26.47.png"
   content: "The Cache UI module aims to provide the missing UI for cache bins and entries."
 
 - url: "https://www.drupal.org/project/content_entity_sync"
