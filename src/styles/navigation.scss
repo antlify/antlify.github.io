@@ -44,7 +44,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-list {
-  @apply z-10 min-w-[768px] rounded bg-body shadow dark:bg-darkmode-body -left-64;
+  @apply z-10 md:min-w-[768px] rounded bg-body shadow dark:bg-darkmode-body -left-64;
 }
 
 .nav-dropdown-item {
