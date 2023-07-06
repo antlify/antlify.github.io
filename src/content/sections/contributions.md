@@ -1,9 +1,7 @@
 ---
 enable: true
-title: "Ügyfeleink véleménye"
-description: "•••"
 
-# Testimonials
+# Contributions
 contributions:
 - url: "https://www.drupal.org/project/cache_ui"
   name: "Cache UI"

@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 const entry = await getEntryBySlug("pages", lang + "/drupal");
 
 const adventages = await getEntryBySlug("sections", lang + "/adventages");
-const contributions = await getEntryBySlug("sections", lang + "/contributions");
+const contributions = await getEntryBySlug("sections", "contributions");
 
 
 const { Content } = await entry.render();
