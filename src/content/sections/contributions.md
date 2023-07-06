@@ -6,7 +6,7 @@ contributions:
 - url: "https://www.drupal.org/project/boutique"
   name: "Boutique"
   image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Boutique.png"
-  content: "The Cache UI module aims to provide the missing UI for cache bins and entries."
+  content: "The Boutique module provides excellent Drupal Commerce configuration with extras."
   
 - url: "https://www.drupal.org/project/cache_ui"
   name: "Cache UI"
