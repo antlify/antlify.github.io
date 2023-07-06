@@ -3,11 +3,11 @@ enable: true
 
 # Contributions
 contributions:
-- url: "https://www.drupal.org/project/boutique"
-  name: "Boutique"
-  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Boutique.png"
-  content: "The Boutique module provides excellent Drupal Commerce configuration with extras."
-  
+#- url: "https://www.drupal.org/project/boutique"
+#  name: "Boutique"
+#  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Boutique.png"
+#  content: "The Boutique module provides excellent Drupal Commerce configuration with extras."
+#  
 - url: "https://www.drupal.org/project/cache_ui"
   name: "Cache UI"
   image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Ke%CC%81pernyo%CC%8Bfoto%CC%81%202023-07-06%20-%200.26.47.png"
