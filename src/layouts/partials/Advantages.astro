@@ -1,19 +1,19 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "@astrojs/image/components";
-const { adventages } = Astro.props;
+const { advantages } = Astro.props;
 ---
 
 {
-  adventages.data.enable && (
+  advantages.data.enable && (
 <div class="mt-8">
-  <h2 class="text-3xl" set:html={markdownify(adventages.data.title)} />
-  <p class="mt-4" set:html={markdownify(adventages.data.description)} />
+  <h2 class="text-3xl" set:html={markdownify(advantages.data.title)} />
+  <p class="mt-4" set:html={markdownify(advantages.data.description)} />
 
   <div class="max-w-xl py-12 mx-auto text-left lg:max-w-7xl">
     <div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-3 lg:space-y-0">
-        {adventages.data.adventages.map(
+        {advantages.data.advantages.map(
           (item: {
             content: string;
             name: string;

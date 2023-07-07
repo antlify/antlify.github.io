@@ -3,6 +3,11 @@ enable: true
 
 # Contributions
 contributions:
+#- url: "https://www.drupal.org/project/advert"
+#  name: "Advert"
+#  image: "https://www.drupal.org/files/project-images/ADVERT.png"
+#  content: "The Advert module provides a custom entity type to accept user-submitted adverts."
+#  
 #- url: "https://www.drupal.org/project/boutique"
 #  name: "Boutique"
 #  image: "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/Boutique.png"

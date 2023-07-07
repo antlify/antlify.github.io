@@ -21,7 +21,7 @@ const t = useTranslations(lang);
           <div>
             <Logo />
             <p class="text w-2/3 my-8 text-slate-600 dark:text-slate-200">
-              Az Antlify Consulting Kft. eredményorientált webfejlesztési szolgáltatásokat nyújt.
+              {t('footer.tagline')}
             </p>
           </div>
         </div>
@@ -46,11 +46,12 @@ const t = useTranslations(lang);
         <div class="ml-8 lg:w-64">
           <p class="text-base font-semibold">
             <a href={`/${lang}${navigation_button.link}`}>
-              <span class="absolute inset-0 sm:rounded-2xl"></span>Keressen elérhetőségeinken!
+              <span class="absolute inset-0 sm:rounded-2xl"></span>
+              {t('footer.callout.headline')}
             </a>
           </p>
           <p class="mt-1 text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600">
-            Follow us for social media for news and updates
+            {t('footer.callout.tagline')}
           </p>
         </div>
       </div>

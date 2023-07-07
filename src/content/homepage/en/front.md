@@ -2,8 +2,7 @@
 # Banner
 banner:
   title: 'We create <span class="from-dark-100 to-primary dark:to-blue-200 dark:from-white bg-gradient-to-r bg-clip-text text-transparent whitespace-nowrap">blazing-fast,</span> modern websites.'
-  content: "Pixel perfect web development.
-_— Experience the new generation of web design!_"
+  content: "Pixel perfect web development. We provide internationally recognized professional services."
   image: "/images/banner.png"
   button:
     enable: true

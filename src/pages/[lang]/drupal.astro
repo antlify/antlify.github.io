@@ -10,7 +10,7 @@ import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { humanize } from "@/lib/utils/textConverter";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { languages } from "../../i18n/ui";
-import Adventages from "../../layouts/partials/Adventages.astro";
+import Advantages from "../../layouts/partials/advantages.astro";
 import Contributions from "../../layouts/partials/Contributions.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 const entry = await getEntryBySlug("pages", lang + "/drupal");
 
-const adventages = await getEntryBySlug("sections", lang + "/adventages");
+const advantages = await getEntryBySlug("sections", lang + "/advantages");
 const contributions = await getEntryBySlug("sections", "contributions");
 
 
@@ -124,7 +124,7 @@ const { title, description, meta_title, image } = entry.data;
   </div>
   <div class="relative items-center container mx-auto max-w-7xl lg:py-24">
 
-    <Adventages adventages={adventages} />
+    <Advantages advantages={advantages} />
     <Contributions contributions={contributions} />
 
 

@@ -53,12 +53,12 @@ const { banner, features } = homepage.data;
     <div class="mx-auto max-w-4xl text-center">
       <h1 set:html={markdownify(banner.title)} class="mb-4 md:text-5xl lg:text-7xl bg-gradient-to-br from-slate-900 via-primary to-blue-900 bg-clip-text text-transparent" />
 
-      <p set:html={markdownify(banner.content)} class="mt-6 text-lg leading-8 text-gray-600 ms-4" />
+      <p set:html={markdownify(banner.content)} class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300 ms-4" />
 
       <div class="mt-10 flex items-center justify-center gap-x-6">
         {
           banner.button.enable && (
-            <a class="inline-flex items-center justify-center w-full px-5 py-3 font-medium text-center border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 focus:border-blue-300 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href={banner.button.link}>
+            <a class="inline-flex items-center justify-center w-full px-5 py-3 font-medium text-center border border-gray-200 rounded-lg sm:w-auto hover:bg-slate-100 hover:bg-opacity-50 focus:ring-4 focus:ring-blue-300 focus:border-blue-300 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href={banner.button.link}>
               {banner.button.label}
             </a>
           )
@@ -72,10 +72,11 @@ const { banner, features } = homepage.data;
 
 
   <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-    <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-      Check out the latest updates on our
+    <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-800 dark:text-slate-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+      { t('index.announcement') }
       <a href="https://www.linkedin.com/company/antlify/" target="_blank" class="font-semibold text-primary">
-        <span class="absolute inset-0" aria-hidden="true"></span>LinkedIn profile
+        <span class="absolute inset-0" aria-hidden="true"></span>
+        { t('index.announcement.button') }
         <span aria-hidden="true" class="inline-block ms-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="#160873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>

@@ -1,10 +1,10 @@
 ---
 enable: true
 title: "Mikor ideális választás a Drupal?"
-description: "Lorem ipsum dolor sit amet"
+description: "A Drupal keretrendszer egy sokoldalú, erős és rugalmas weboldal-fejlesztési eszköz, amely számos előnnyel rendelkezik."
 
-# Adventages
-adventages:
+# advantages
+advantages:
 - name: "Nagy forgalmú weboldalakhoz"
   content: "Megfelelően konfigurálva a Drupal képes forgalmas portálok kiszolgálására, különösen belépést igénylő munkamenetek esetén."
 
@@ -20,11 +20,11 @@ adventages:
 - name: "Állami és oktatási rendszerekhez"
   content: "Széles körben alkalmazott összetett weboldalak, projektek számára, ahol fontos a különböző jogosultságok és munkamenetek meghatározása."
 
-- name: "Nemzetközi és többnyelvű projektekhez"
-  content: "Define the data model in your database and query data with GraphQL."
+- name: "Belső adatkezelő rendszerekhez"
+  content: "A biztonsági standardoknak köszönhetően széles körben alkalmazható különböző vállalkozások belső működésének elősegítésére."
 
-- name: "Nemzetközi és többnyelvű projektekhez"
-  content: "Define the data model in your database and query data with GraphQL."
+- name: "Rendszerek egyesítéséhez"
+  content: "A különböző rendszerekben tárolt tartalmak mozgatásához, vagy kezeléséhez, átalakításához is tökéletes megoldást biztosít."
 
 - name: "Hatalmas mennyiségű tartalomhoz"
   content: "A Drupal képes akár több millió különböző bejegyzés hatékony tárolására, és a tárolt tartalom optimális kezelésére teljesítménybeli problémák nélkül."
